@@ -1,26 +1,47 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+
+
+
+    /* Fonts */
+    --font-body: var(--font-raleway);
+    --font-heading: var(--font-nata-sans);
   }
+
+  @theme inline {
+    --font-sans: var(--font-body);
+    --font-heading: var(--font-heading);
+  }
+
+
+  body {
+    font-family: var(--font-raleway), sans-serif;
+    @apply overflow-x-hidden;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-nata-sans), sans-serif;
+    @apply font-bold;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
+@layer components{
+  /* any custom class will go here */
 }
