@@ -1,24 +1,9 @@
-import Link from "next/link";
 import Image from "next/image";
 
 export default function WhoWeAre() {
   return (
     <section className="bg-[#f5f7fb] py-20 px-6 md:px-16">
       <div className="max-w-7xl mx-auto">
-
-        <Link
-          href="/AboutUs"
-          className="inline-block bg-[#1f2e4a] text-white px-6 py-3 rounded-lg shadow-md hover:bg-[#162238] transition duration-300"
-        >
-          About Us page 
-        </Link>
-
-        <Link
-          href="/ContactUs"
-          className="inline-block bg-[#1f2e4a] ml-5 text-white px-6 py-3 rounded-lg shadow-md hover:bg-[#162238] transition duration-300"
-        >
-          Contact Us 
-        </Link>
 
         <h2 className="text-[44px] font-semibold text-[#2f4f88] text-center mb-12">
           Who We Are

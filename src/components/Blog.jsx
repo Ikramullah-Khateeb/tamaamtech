@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState } from 'react'
-import Image from 'next/image'
 
 const hoverOn = (e) => {
     e.currentTarget.style.transform = 'translateY(-5px)'

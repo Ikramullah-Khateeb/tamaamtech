@@ -1,15 +1,28 @@
-// import Hero from "@/components/Hero";
+import Blog from "@/components/Blog";
+import Cta from "@/components/Cta";
+import Faq from "@/components/Faq";
+import Founder from "@/components/Founder";
+import HeroSection from "@/components/HeroSection";
 import OurServices from "@/components/OurServices";
-import Blog from "@/components/Blog"
-import Image from "next/image";
+import Partners from "@/components/Partners";
+import Stats from "@/components/Stats";
+import WhoWeAre from "@/components/WhoWeAre";
 
-export default function Home() {
+
+
+
+export default function HomePage() {
   return (
-    <div>
-      <h1>Heading</h1>
-      <OurServices/>
-      <Blog/>
-      <p>paragraph</p>
-    </div>
+    <section>
+      <HeroSection />
+      <OurServices />
+      <WhoWeAre />
+      <Stats />
+      <Founder />
+      <Partners />
+      <Faq />
+      <Blog />
+      <Cta />
+    </section>
   );
 }

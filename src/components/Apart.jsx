@@ -1,4 +1,4 @@
-export default function WhatSetsUsApart() {
+export default function Apart() {
   return (
     <section className="bg-[#f4f6fb] py-20 px-6 md:px-16">
       <div className="max-w-7xl mx-auto">

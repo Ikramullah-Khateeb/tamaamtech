@@ -12,7 +12,7 @@ export default function Founder() {
         <div className="relative flex justify-center items-center mb-10">
           
           {/* Line */}
-          <div className="absolute w-full h-[2px] bg-gray-300"></div>
+          <div className="absolute w-full h-0.5 bg-gray-300"></div>
 
           {/* Image */}
           <div className="relative z-10 bg-[#f5f7fb] px-4">

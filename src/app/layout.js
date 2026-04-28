@@ -1,5 +1,6 @@
 import { Nata_Sans, Raleway } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 const nataSans = Nata_Sans({
   subsets: ["latin"],
@@ -24,7 +25,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${nataSans.variable} ${raleway.variable}`}>
-        {/* header will go here */}
+        <Navbar />
         {children}
       </body>
     </html>

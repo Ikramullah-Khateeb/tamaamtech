@@ -2,9 +2,9 @@
 
 import { FiArrowUpRight, FiPhone } from "react-icons/fi";
 
-export default function CTASection() {
+export default function Cta() {
     return (
-        <section className="w-full bg-gradient-to-b from-[#2f4f88] to-[#243a73] py-24 px-6 md:px-16 rounded-b-2xl relative">
+        <section className="w-full bg-linear-to-b from-[#2f4f88] to-[#243a73] py-24 px-6 md:px-16 rounded-b-2xl relative">
 
             <div className="max-w-5xl mx-auto text-center">
 

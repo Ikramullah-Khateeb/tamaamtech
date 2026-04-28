@@ -1,7 +1,8 @@
 "use client";
+
 import { useEffect, useState } from "react";
 
-export default function StatsSection() {
+export default function Stats() {
   const stats = [
     { value: 30, suffix: "+", label: "Projects Completed" },
     { value: 1500, suffix: "+", label: "Dedicated Hours" },

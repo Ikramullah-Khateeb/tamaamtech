@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function WhoWeAre() {
+export default function AboutHero() {
     return (
         <section className="bg-[#f5f7fb] py-20 px-6 md:px-16">
             <div className="max-w-7xl mx-auto">

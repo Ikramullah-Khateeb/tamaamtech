@@ -1,4 +1,4 @@
-export default function FAQ() {
+export default function Faq() {
   return (
     <section className="bg-[#f5f7fb] py-20 px-6 md:px-16">
       <div className="max-w-7xl mx-auto">
