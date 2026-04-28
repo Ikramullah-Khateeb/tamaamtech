@@ -20,11 +20,11 @@ const cardStyle = { transition: 'transform 0.3s ease, box-shadow 0.3s ease, bord
 
 export default function OurServices() {
     return (
-        <div className='max-w-7xl mx-auto'>
+        <div className='max-w-7xl mx-auto px-6'>
             <div className="text-[44px] font-bold text-center mb-12">
                 <h2>What We Engineer & Execute</h2>
             </div>
-            <div className='grid grid-cols-3 gap-10'>
+            <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 '>
 
                 <div className={cardClass} style={cardStyle} onMouseEnter={hoverOn} onMouseLeave={hoverOff}>
                     <div className='mb-6'>
