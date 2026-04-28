@@ -10,7 +10,7 @@ export default function Founder() {
 
         {/* Profile + Line */}
         <div className="relative flex justify-center items-center mb-10">
-          
+
           {/* Line */}
           <div className="absolute w-full h-[2px] bg-gray-300"></div>
 
@@ -26,7 +26,7 @@ export default function Founder() {
 
         {/* Content */}
         <div className="text-left md:text-left max-w-7xl mx-auto">
-          
+
           <h3 className="text-lg font-semibold text-[#2f4f88] mb-4">
             From Vision to Reality
           </h3>
@@ -59,7 +59,7 @@ export default function Founder() {
             </div>
 
             {/* Button */}
-            <button className="bg-[#1f2e4a] text-white px-6 py-3 rounded-lg shadow-md hover:bg-[#162238] transition">
+            <button className="mt-4 md:mt-0 bg-[#1f2e4a] text-white px-6 py-3 rounded-lg hover:bg-[#1e40af] transition duration-300">
               Explore Founder’s Portfolio
             </button>
 

@@ -7,17 +7,17 @@ export default function WhoWeAre() {
       <div className="max-w-7xl mx-auto">
 
         <Link
-          href="/AboutUs"
+          href="/about"
           className="inline-block bg-[#1f2e4a] text-white px-6 py-3 rounded-lg shadow-md hover:bg-[#162238] transition duration-300"
         >
-          About Us page 
+          About Us page
         </Link>
 
         <Link
-          href="/ContactUs"
+          href="/contact"
           className="inline-block bg-[#1f2e4a] ml-5 text-white px-6 py-3 rounded-lg shadow-md hover:bg-[#162238] transition duration-300"
         >
-          Contact Us 
+          Contact Us
         </Link>
 
         <h2 className="text-[44px] font-semibold text-[#2f4f88] text-center mb-12">
@@ -52,7 +52,7 @@ export default function WhoWeAre() {
             </p>
 
             {/* BUTTON */}
-            <button className="bg-[#1f2e4a] text-white px-6 py-3 rounded-lg shadow-md hover:bg-[#162238] transition duration-300">
+            <button className="mt-4 md:mt-0 bg-[#1f2e4a] text-white px-6 py-3 rounded-lg hover:bg-[#1e40af] transition duration-300">
               About Qutbee Tech
             </button>
           </div>

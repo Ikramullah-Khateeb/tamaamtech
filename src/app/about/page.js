@@ -4,14 +4,14 @@ import CTA from "@/components/Cta";
 import Apart from "@/components/Apart";
 import Whyus from "@/components/Whyus";
 
-export default function AboutUs() {
+export default function about() {
   return (
-    <div>
+    <>
       <Aboutus/>
       <Stats/>
       <Apart/>
       <Whyus/>
       <CTA/>
-    </div>
+    </>
   );
 }

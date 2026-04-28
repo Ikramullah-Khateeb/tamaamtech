@@ -1,3 +1,5 @@
+import { FiChevronDown } from "react-icons/fi";
+
 export default function FAQ() {
   return (
     <section className="bg-[#f5f7fb] py-20 px-6 md:px-16">
@@ -9,7 +11,7 @@ export default function FAQ() {
             Frequently Asked Questions
           </h2>
 
-          <button className="mt-4 md:mt-0 bg-[#1f2e4a] text-white px-6 py-3 rounded-lg">
+          <button className="mt-4 md:mt-0 bg-[#1f2e4a] text-white px-6 py-3 rounded-lg hover:bg-[#1e40af] transition duration-300">
             View FAQs
           </button>
         </div>
@@ -20,7 +22,7 @@ export default function FAQ() {
           <details className="border-b pb-4 group">
             <summary className="cursor-pointer text-lg font-medium text-[#1f2e4a] flex justify-between">
               What Services Does Qutbee Technologies Offer In The UAE?
-              <span className="group-open:rotate-180 transition">↓</span>
+              <FiChevronDown className="transition-transform duration-300 group-open:rotate-180" />
             </summary>
             <p className="mt-3 text-gray-600 text-sm">
               We help UAE businesses build a strong digital presence...
@@ -30,7 +32,7 @@ export default function FAQ() {
           <details className="border-b pb-4 group">
             <summary className="cursor-pointer text-lg font-medium text-[#1f2e4a] flex justify-between">
               How Does Qutbee Keep My Company Secure?
-              <span className="group-open:rotate-180 transition">↓</span>
+              <FiChevronDown className="transition-transform duration-300 group-open:rotate-180" />
             </summary>
             <p className="mt-3 text-gray-600 text-sm">
               We implement advanced cybersecurity solutions...
@@ -40,7 +42,7 @@ export default function FAQ() {
           <details className="border-b pb-4 group">
             <summary className="cursor-pointer text-lg font-medium text-[#1f2e4a] flex justify-between">
               Do You Provide Digital Marketing And SEO In The UAE?
-              <span className="group-open:rotate-180 transition">↓</span>
+              <FiChevronDown className="transition-transform duration-300 group-open:rotate-180" />
             </summary>
             <p className="mt-3 text-gray-600 text-sm">
               Yes, we provide complete SEO services...
@@ -50,7 +52,7 @@ export default function FAQ() {
           <details className="border-b pb-4 group">
             <summary className="cursor-pointer text-lg font-medium text-[#1f2e4a] flex justify-between">
               Which industries in the UAE do you serve?
-              <span className="group-open:rotate-180 transition">↓</span>
+              <FiChevronDown className="transition-transform duration-300 group-open:rotate-180" />
             </summary>
             <p className="mt-3 text-gray-600 text-sm">
               We support Real Estate, Healthcare, Fintech, Retail, Education, and Fast Moving Startups. If your work needs a clean site, a high converting app, or secure cloud, we can Help.

@@ -1,5 +1,7 @@
 import { Nata_Sans, Raleway } from "next/font/google";
 import "./globals.css";
+import Footer from "@/components/Footer";
+
 
 const nataSans = Nata_Sans({
   subsets: ["latin"],
@@ -26,6 +28,7 @@ export default function RootLayout({ children }) {
       <body className={`${nataSans.variable} ${raleway.variable}`}>
         {/* header will go here */}
         {children}
+        <Footer/>
       </body>
     </html>
   );
