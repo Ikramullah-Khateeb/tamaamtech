@@ -53,13 +53,13 @@ export default function Blog() {
                         onMouseEnter={hoverOn}
                         onMouseLeave={hoverOff}
                     >
-                        <div className='relative w-full h-[200px]'>
+                        <div className='relative w-full h-200px'>
                             <img
                                 src='https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80'
                                 alt='Rebuilding UAE Digital Foundations'
                                 className='w-full h-full object-cover'
                             />
-                            <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent' />
+                            <div className='absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent' />
                             <div className='absolute top-3 left-3 w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center'>
                                 <svg xmlns='http://www.w3.org/2000/svg' className='w-4 h-4 text-white' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
                                     <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z' />
@@ -91,13 +91,13 @@ export default function Blog() {
                         onMouseEnter={hoverOn}
                         onMouseLeave={hoverOff}
                     >
-                        <div className='relative w-full h-[200px]'>
+                        <div className='relative w-full h-200px'>
                             <img
                                 src='https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&q=80'
                                 alt='Cybersecurity'
                                 className='w-full h-full object-cover'
                             />
-                            <div className='absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent' />
+                            <div className='absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent' />
                         </div>
                         <div className='p-5'>
                             <h3 className='text-[16px] font-bold text-[#1a1a2e] leading-snug mb-2'>
@@ -119,13 +119,13 @@ export default function Blog() {
                         onMouseEnter={hoverOn}
                         onMouseLeave={hoverOff}
                     >
-                        <div className='relative w-full h-[200px]'>
+                        <div className='relative w-full h-200px'>
                             <img
                                 src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80'
                                 alt='Website Trust'
                                 className='w-full h-full object-cover'
                             />
-                            <div className='absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent' />
+                            <div className='absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent' />
                         </div>
                         <div className='p-5'>
                             <h3 className='text-[16px] font-bold text-[#1a1a2e] leading-snug mb-2'>
