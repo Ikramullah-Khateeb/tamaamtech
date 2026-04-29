@@ -6,7 +6,7 @@ import { MdEmail } from "react-icons/md";
 
 export default function ContactPage() {
     return (
-        <section className="relative bg-[#f4f6fb] py-20 px-6 md:px-16 overflow-hidden">
+        <section className="relative bg-(--white) py-14 sm:py-16 md:py-20 px-3 sm:px-6 md:px-16 overflow-hidden">
 
             {/* SVG BACKGROUND */}
             <svg
@@ -37,11 +37,11 @@ export default function ContactPage() {
             <div className="relative z-10 max-w-7xl mx-auto text-center">
 
                 {/* Heading */}
-                <h2 className="text-3xl md:text-4xl font-semibold text-[#2f4f88]">
+                <h2 className="text-[32px] lg:text-[48px] font-bold text-center mb-1 pt-8 sm:pt-10 md:pt-12 tracking-[-1px] bg-linear-to-r from-(--primary-color) to-[#3b82f6] bg-clip-text text-transparent">
                     Get In Touch
                 </h2>
 
-                <p className="text-gray-600 mt-3 text-sm md:text-base">
+                <p className="text-(--text-light) text-sm md:text-base">
                     We'd love to hear from you. Whether you have a question or just want to say hello, our team is ready to help!
                 </p>
 
@@ -49,9 +49,9 @@ export default function ContactPage() {
                 <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
 
                     {/* LEFT - FORM */}
-                    <div className="bg-white/70 backdrop-blur-md rounded-2xl p-6 md:p-8 shadow-md border border-transparent hover:border-black hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                    <div className="bg-(--white) backdrop-blur-md rounded-2xl p-6 md:p-8 shadow-(--shadow-large) border border-transparent hover:border-(--primary-color) hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
 
-                        <h3 className="text-lg font-semibold text-[#1f2e4a] mb-4">
+                        <h3 className="text-2xl font-bold text-(--primary-color) mb-5">
                             Send Us a Message
                         </h3>
 
@@ -60,34 +60,33 @@ export default function ContactPage() {
                             <input
                                 type="text"
                                 placeholder="Your Name *"
-                                className="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm outline-none 
-                                       hover:border-black focus:border-black focus:ring-2 focus:ring-[#1e40af] transition"
+                                className="w-full border border-(--primary-color) rounded-lg px-3 py-3.5 text-[16px] outline-none 
+                                     focus:border-(--text-light) transition text-(--text-dark)"
                             />
 
                             <input
                                 type="email"
                                 placeholder="Your Email *"
-                                className="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm outline-none 
-                                        hover:border-black focus:border-black focus:ring-2 focus:ring-[#1e40af] transition"
+                                className="w-full border border-(--primary-color) rounded-lg px-3 py-3.5 text-[16px] outline-none focus:border-(--text-light) transition"
                             />
 
                             <input
                                 type="text"
                                 placeholder="Your Number *"
-                                className="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm outline-none 
-                                        hover:border-black focus:border-black focus:ring-2 focus:ring-[#1e40af] transition"
+                                className="w-full border border-(--primary-color) rounded-lg px-3 py-3.5 text-[16px] outline-none 
+                                     focus:border-(--text-light) transition"
                             />
 
                             <textarea
                                 rows="4"
                                 placeholder="Your Message *"
-                                className="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm outline-none 
-                                        hover:border-black focus:border-black focus:ring-2 focus:ring-[#1e40af] transition"
+                                className="w-full border border-(--primary-color) rounded-lg px-3 py-3.5 text-[16px] outline-none 
+                                     focus:border-(--text-light) transition"
                             />
 
                             <button
                                 type="submit"
-                                className="bg-[#1f2e4a] text-white px-6 py-2 rounded-lg text-sm 
+                                className="bg-[#1f2e4a] text-(--white) font-bold px-7 py-3 rounded-lg text-[16px] 
                                          hover:bg-[#1e40af] transition duration-300"
                             >
                                 Send Message
@@ -97,56 +96,56 @@ export default function ContactPage() {
                     </div>
 
                     {/* RIGHT - CONTACT DETAILS */}
-                    <div className="bg-white/70 backdrop-blur-md rounded-2xl p-6 md:p-8 shadow-md border border-transparent hover:border-black hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                    <div className="bg-(--white) backdrop-blur-md rounded-2xl p-6 md:p-8 shadow-(--shadow-large) border border-transparent hover:border-(--primary-color) hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
 
-                        <h3 className="text-lg font-semibold text-[#1f2e4a] mb-4">
+                        <h3 className="text-2xl font-bold text-(--primary-color) mb-5">
                             Contact Details
                         </h3>
 
                         <div className="mb-6">
-                            <h4 className="font-medium text-[#1f2e4a] mb-2">
+                            <h4 className="text-xl font-semibold text-(--primary-color) mb-2">
                                 Connect With Us
                             </h4>
 
-                            <p className="text-sm text-gray-600 mb-3">
+                            <p className="text-sm text-gray-600 mb-3 text-[15px]">
                                 For inquiries, support, or feedback, reach out via email. We respond within 24 hours.
                             </p>
 
-                            <div className="flex items-center gap-2 text-sm text-gray-700 mb-2">
+                            <div className="flex items-center gap-2 text-sm text-gray-700 mb-2 text-[15px]">
                                 <FiMail /> support@qutbee.com
                             </div>
 
-                            <div className="flex items-center gap-2 text-sm text-gray-700">
+                            <div className="flex items-center gap-2 text-sm text-gray-700 text-[15px]">
                                 <FiPhone /> +971 509853664
                             </div>
                         </div>
 
                         <div className="mb-6">
-                            <h4 className="font-medium text-[#1f2e4a] mb-2">
+                            <h4 className="text-xl font-semibold text-(--primary-color) mb-2">
                                 Where to Find Us
                             </h4>
 
-                            <p className="text-sm text-gray-600 mb-2">
+                            <p className="text-sm text-gray-600 mb-2 text-[15px]">
                                 Feel free to stop by during office hours or send us mail at your convenience.
                             </p>
 
-                            <div className="flex items-center gap-2 text-sm text-gray-700">
+                            <div className="flex items-center gap-2 text-sm text-gray-700 text-[15px]">
                                 <FiMapPin /> Abu Dhabi, United Arab Emirates
                             </div>
                         </div>
 
                         <div className="flex gap-3 mt-4">
-                            <div className="w-9 h-9 bg-[#1f2e4a] text-white flex items-center justify-center rounded-full hover:bg-[#1e40af] transition">
-                                <FaWhatsapp size={14} />
+                            <div className="w-10 h-10 bg-[#1f2e4a] text-white flex items-center justify-center rounded-full hover:bg-[#1e40af] transition">
+                                <FaWhatsapp size={18} />
                             </div>
-                            <div className="w-9 h-9 bg-[#1f2e4a] text-white flex items-center justify-center rounded-full hover:bg-[#1e40af] transition">
-                                <FaLinkedinIn size={14} />
+                            <div className="w-10 h-10 bg-[#1f2e4a] text-white flex items-center justify-center rounded-full hover:bg-[#1e40af] transition">
+                                <FaLinkedinIn size={18} />
                             </div>
-                            <div className="w-9 h-9 bg-[#1f2e4a] text-white flex items-center justify-center rounded-full hover:bg-[#1e40af] transition">
-                                <MdEmail size={14} />
+                            <div className="w-10 h-10 bg-[#1f2e4a] text-white flex items-center justify-center rounded-full hover:bg-[#1e40af] transition">
+                                <MdEmail size={18} />
                             </div>
-                            <div className="w-9 h-9 bg-[#1f2e4a] text-white flex items-center justify-center rounded-full hover:bg-[#1e40af] transition">
-                                <FiPhone size={14} />
+                            <div className="w-10 h-10 bg-[#1f2e4a] text-white flex items-center justify-center rounded-full hover:bg-[#1e40af] transition">
+                                <FiPhone size={18} />
                             </div>
                         </div>
 
