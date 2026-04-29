@@ -11,8 +11,8 @@ export default function Stats() {
   ];
 
   return (
-    <section className="bg-[#1f2e4a] py-12 px-6">
-      <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+    <section className="bg-(--primary-color) py-10 sm:py-12 md:py-14 px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center">
 
         {stats.map((item, index) => (
           <Counter key={index} end={item.value} suffix={item.suffix} label={item.label} />
@@ -28,7 +28,7 @@ function Counter({ end, suffix, label }) {
 
   useEffect(() => {
     let start = 0;
-    const duration = 1800; // animation time
+    const duration = 1800;
     const increment = end / (duration / 16);
 
     const timer = setInterval(() => {
@@ -45,11 +45,11 @@ function Counter({ end, suffix, label }) {
   }, [end]);
 
   return (
-    <div>
-      <h3 className="text-white text-3xl md:text-4xl font-bold mb-2">
+    <div className="flex flex-col items-center justify-center">
+      <h3 className="text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] font-bold text-(--white) mb-1 sm:mb-2">
         {count}{suffix}
       </h3>
-      <p className="text-gray-300 text-sm md:text-base">
+      <p className="text-[1rem] sm:text-[1.1rem] md:text-[1.25rem] text-(--off-white) leading-normal">
         {label}
       </p>
     </div>

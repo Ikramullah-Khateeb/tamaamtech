@@ -1,42 +1,43 @@
 export default function Founder() {
   return (
-    <section className="bg-[#f5f7fb] py-20 px-6 md:px-16">
+    <section className="bg-[#f5f7fb] py-14 sm:py-16 md:py-20 px-4 sm:px-6 md:px-16">
       <div className="max-w-7xl mx-auto text-center">
 
         {/* Heading */}
-        <h2 className="text-3xl md:text-4xl font-semibold text-[#2f4f88] mb-12">
+        <h2 className="text-[28px] sm:text-[32px] lg:text-[44.8px] font-bold text-center mb-8 sm:mb-10 md:mb-12 pt-8 sm:pt-10 md:pt-12 tracking-[-1px] bg-linear-to-r from-(--primary-color) to-[#3b82f6] bg-clip-text text-transparent">
           Message From Our Founder
         </h2>
 
         {/* Profile + Line */}
-        <div className="relative flex justify-center items-center mb-10">
+        <div className="relative flex justify-center items-center mb-8 sm:mb-10">
           
           {/* Line */}
           <div className="absolute w-full h-0.5 bg-gray-300"></div>
 
           {/* Image */}
-          <div className="relative z-10 bg-[#f5f7fb] px-4">
+          <div className="relative z-10 bg-[#f5f7fb] px-3 sm:px-4">
             <img
-              src="/founder.jpg" // replace with real image
+              src="/founder.jpg"
               alt="Founder"
-              className="w-24 h-24 rounded-full object-cover shadow-md"
+              className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover shadow-md"
             />
           </div>
         </div>
 
         {/* Content */}
-        <div className="text-left md:text-left max-w-7xl mx-auto">
+        <div className="text-left max-w-7xl mx-auto">
           
-          <h3 className="text-lg font-semibold text-[#2f4f88] mb-4">
+          <h3 className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[32px] font-bold mb-3 sm:mb-4 inline-block bg-linear-to-r from-(--primary-color) to-[#3b82f6] bg-clip-text text-transparent transform transition-all duration-700 opacity-100 translate-x-0 hover:-translate-y-1">
+
             From Vision to Reality
           </h3>
 
-          <p className="text-gray-600 text-sm leading-relaxed mb-4">
-            I founded <span className="font-semibold">Qutbee Technologies</span> with a vision to help businesses thrive through digital platforms that build trust and drive growth, from the UAE to the World. My journey includes contributing to the “Digital Dubai initiatives”, making the city paperless, and later adding to my expertise by leading key government projects in Abu Dhabi.
+          <p className="text-[1rem] sm:text-[1.1rem] lg:text-[1.25rem] text-(--text-dark) leading-[1.6] md:leading-normal text-left md:text-justify mb-4">
+            I founded <strong>Qutbee Technologies</strong>with a vision to help businesses thrive through digital platforms that build trust and drive growth, from the UAE to the World. My journey includes contributing to the “Digital Dubai initiatives”, making the city paperless, and later adding to my expertise by leading key government projects in Abu Dhabi.These experiences shaped my belief that the <strong> UAE </strong>is already one step ahead in the global digital era.
           </p>
 
-          <p className="text-gray-600 text-sm leading-relaxed mb-6">
-            At Qutbee, we go beyond websites — we design Digital journeys powered by <span className="font-semibold">SEO, Cloud, Cybersecurity, ERP, CRM, and AI Automation</span>, keeping our clients ahead of the curve.
+          <p className="text-[1rem] sm:text-[1.1rem] md:text-[1.25rem] text-(--text-dark) leading-[1.6] md:leading-normal text-left md:text-justify mb-5 sm:mb-6">
+            At Qutbee, we go beyond websites — we design Digital journeys powered by <strong>SEO, Cloud, Cybersecurity, ERP, CRM, and AI Automation </strong>keeping our clients ahead of the curve.
           </p>
 
           {/* Bottom Row */}
@@ -44,22 +45,22 @@ export default function Founder() {
 
             {/* Name + Signature */}
             <div>
-              <h4 className="text-lg font-semibold text-[#1f2e4a]">
+              <h4 className="text-base sm:text-[24px] md:text-[28px] font-bold text-(--primary-color)">
                 Faisal Qutbee
               </h4>
-              <p className="text-gray-500 text-sm">
+              <p className="text-sm text-(--text-light)">
                 Founder & CEO, Qutbee Technologies
               </p>
 
               <img
-                src="/signature.png" // optional signature image
+                src="/signature.png"
                 alt="signature"
-                className="mt-3 h-10"
+                className="mt-3 h-8 sm:h-10"
               />
             </div>
 
             {/* Button */}
-            <button className="bg-[#1f2e4a] text-white px-6 py-3 rounded-lg shadow-md hover:bg-[#162238] transition">
+            <button className="inline-flex items-center justify-center gap-2.5 w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-(--primary-color) text-(--white) rounded-lg shadow-(--shadow-medium) font-semibold text-sm sm:text-base transition-all duration-300 relative overflow-hidden hover:bg-[#1e40af] hover:shadow-(--shadow-large) hover:-translate-y-0.5">
               Explore Founder’s Portfolio
             </button>
 
