@@ -1,37 +1,83 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import Link from "next/link";
 import { FaWhatsapp, FaLinkedinIn, FaEnvelope, FaPhone } from "react-icons/fa";
 
 export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="w-full bg-white py-4 flex justify-center">
-      <div className="w-[95%] max-w-7xl bg-gray-100 rounded-2xl px-6 py-4 flex items-center justify-between shadow-sm">
-        
+    <nav
+      className={`fixed left-1/2 z-50 w-[90%] max-w-[1100px] 
+      -translate-x-1/2 transition-all duration-300 
+      rounded-2xl border backdrop-blur-xl
+      ${
+        scrolled
+          ? "top-3 bg-white/10 shadow-xl border-white/20"
+          : "top-[5%] bg-white/5 shadow-lg border-white/30"
+      }`}
+    >
+      <div className="flex items-center justify-between px-6 py-3">
+
         {/* Logo */}
-        <div className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold">
-            Q
+        <Link href="/" className="flex items-center ml-2">
+          <img
+            src="/assets/images/nav-logo-small.webp"
+            alt="Qutbee"
+            className="w-[140px]"
+          />
+        </Link>
+
+        {/* Nav Menu */}
+        <div className="hidden md:flex items-center w-full px-5">
+          
+          {/* Center Links */}
+          <div className="flex gap-8 mx-auto">
+            {["Home", "About", "Services", "Blogs", "Contact"].map((item, i) => (
+              <Link
+                key={i}
+                href={
+                  item === "Home"
+                    ? "/"
+                    : `/${item.toLowerCase()}`
+                }
+                className="relative text-gray-800 font-medium transition-all duration-300 hover:text-[#20283f]"
+              >
+                {item}
+
+                {/* underline animation */}
+                <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#20283f] transition-all duration-300 group-hover:w-full"></span>
+              </Link>
+            ))}
           </div>
-          <span className="text-xl font-semibold text-gray-700">
-            qutbee
-          </span>
-        </div>
 
-        {/* Nav Links */}
-        <div className="hidden md:flex gap-8 text-gray-600 font-medium">
-          <a href="/" className="hover:text-black">Home</a>
-          <a href="/about" className="hover:text-black">About</a>
-          <a href="/services" className="hover:text-black">Services</a>
-          <a href="#" className="hover:text-black">Blogs</a>
-          <a href="/contact" className="hover:text-black">Contact</a>
-        </div>
-
-        {/* Icons */}
-        <div className="flex items-center gap-5 text-gray-600">
-          <FaWhatsapp className="cursor-pointer hover:text-black" />
-          <FaLinkedinIn className="cursor-pointer hover:text-black" />
-          <FaEnvelope className="cursor-pointer hover:text-black" />
-          <FaPhone className="cursor-pointer hover:text-black" />
+          {/* Social Icons */}
+          <div className="flex gap-5 items-center">
+            <a href="https://wa.me/+971509853664" target="_blank">
+              <FaWhatsapp className="text-gray-800 hover:text-[#20283f] hover:scale-125 transition" />
+            </a>
+            <a href="https://www.linkedin.com/company/qutbeetechnology/" target="_blank">
+              <FaLinkedinIn className="text-gray-800 hover:text-[#20283f] hover:scale-125 transition" />
+            </a>
+            <a href="mailto:support@qutbee.com">
+              <FaEnvelope className="text-gray-800 hover:text-[#20283f] hover:scale-125 transition" />
+            </a>
+            <a href="tel:+971509853664">
+              <FaPhone className="text-gray-800 hover:text-[#20283f] hover:scale-125 transition" />
+            </a>
+          </div>
         </div>
       </div>
-    </div>
+    </nav>
   );
 }

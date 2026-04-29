@@ -1,59 +1,106 @@
 "use client";
 
-import { FiArrowUpRight, FiPhone } from "react-icons/fi";
+import Link from "next/link";
 
-export default function Cta() {
+export default function Cta({
+    isServices = false,
+    ctaTitle,
+    ctaDescription,
+    serviceCtaTitle,
+    highlight,
+    suffix,
+    primaryBtn,
+    secondaryBtn,
+    secondaryhref,
+}) {
+
+
     return (
-        <section className="w-full bg-linear-to-b from-[#2f4f88] to-[#243a73] py-24 px-6 md:px-16 rounded-b-2xl relative">
-
-            <div className="max-w-5xl mx-auto text-center">
-
-                {/* Heading */}
-                <h1 className="text-white text-3xl md:text-5xl font-semibold leading-tight">
-                    Ready to Transform Your Business?
-                </h1>
-
-                {/* Subtext */}
-                <p className="text-gray-200 mt-6 text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
-                    Let's discuss how our innovative technology solutions can accelerate
-                    your growth and drive success. Get started today with a free
-                    consultation.
-                </p>
-
-                {/* Buttons */}
-                <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-
-                    {/* Get Free Consultation */}
-                    <button className="group bg-[#e5e7eb] text-[#1f2e4a] px-6 py-3 rounded-lg flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all duration-300">
-
-                        <span className="transition-transform duration-300 group-hover:-translate-x-1">
-                            Get Free Consultation
+        <section className={`relative overflow-hidden ${isServices ? "bg-white text-[#1e293b]" : "bg-linear-to-br from-[#20283f] to-[#1e40af] text-white"}`}>
+            <div className="max-w-7xl mx-auto px-4 py-24 sm:py-30">
+                <div className="text-center relative z-10 flex flex-col items-center">
+                    {/*  Label  */}
+                    {isServices && (
+                        <span className="inline-block py-1.5 px-3 text-sm font-medium text-[#20283f] bg-black/10 uppercase rounded-full mb-4">
+                            Go beyond compliance
                         </span>
+                    )}
 
-                        <FiArrowUpRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
-                    </button>
+                    {/* Title */}
+                    <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-5 ${isServices ? "text-[#1e293b]" : "text-white"}`}>
+                        {isServices ? (
+                            <>
+                            {serviceCtaTitle}{" "}
+                            <span className="bg-linear-to-br from-[#20283f] to-[#3b82f6] bg-clip-text text-transparent">{highlight}</span>{" "}
+                            {suffix}
+                            </>
+                        ) : (
+                            ctaTitle 
+                        )}
+                    </h2>
 
-                    {/* Contact Us Today */}
-                    <button className="group border border-white text-white px-6 py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-white hover:text-[#1f2e4a] transition-all duration-300">
+                    {/* Subtitle */}
+                    <p className="text-base md:text-lg lg:text-[22px] max-w-175 mx-auto mb-10 opacity-90 leading-relaxed">
+                        {ctaDescription}
+                    </p>
 
-                        <span className="transition-transform duration-300 group-hover:-translate-x-1">
-                            Contact Us Today
-                        </span>
+                    {/* Buttons */}
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        {/* Primary Button */}
+                        <button className={`flex items-center gap-2 px-6 py-4 text-base font-medium md:text-lg ${isServices ? "bg-linear-to-br from-[#20283f] to-[#3b82f6] text-white" : "bg-white text-[#20283f]"} rounded-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl`}>
+                            <span>{primaryBtn}</span>
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                            >
+                                <path d="M7 17L17 7M17 7H7M17 7V17" />
+                            </svg>
+                        </button>
 
-                        <FiPhone className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
-                    </button>
+                        {/* Secondary Button */}
+                        <Link
+                            href={secondaryhref}
+                            className={`flex items-center gap-2 px-6 py-4 text-base md:text-lg font-medium border ${isServices ? "border-[#20283f] text-[#20283f] hover:bg-[#20283f] hover:text-white" : "border-white text-white hover:bg-white hover:text-[#20283f]"} rounded-md transition-all duration-300`}
+                        >
+                            <span>{secondaryBtn}</span>
 
+                            {!isServices ? (
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                >
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                                </svg>
+                            ) : (
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                >
+                                    <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" />
+                                </svg>
+                            )}
+                        </Link>
+                    </div>
                 </div>
             </div>
 
-            {/* Scroll To Top Button */}
-            <button
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                className="fixed bottom-6 right-6 bg-[#1f2e4a] text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition"
-            >
-                ↑
-            </button>
-
+            {/* Background Shapes */}
+            <div className="absolute inset-0 pointer-events-none">
+                <div className="absolute w-50 h-50 bg-white/10 rounded-full -top-24 -right-24 animate-pulse" />
+                <div className="absolute w-75 h-75 bg-white/10 rounded-full -bottom-32 -left-32 animate-pulse" />
+                <div className="absolute w-37.5 h-37.5 bg-white/10 rounded-full top-1/2 left-[10%] animate-pulse" />
+            </div>
         </section>
     );
 }

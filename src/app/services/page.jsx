@@ -1,4 +1,4 @@
-import CtaServices from '@/components/CtaServices'
+import Cta from '@/components/Cta'
 import OurServices from '@/components/OurServices'
 import Platform from '@/components/Platform'
 import ServicesHero from '@/components/ServicesHero'
@@ -12,7 +12,14 @@ export default function ServicesPage() {
     <OurServices />
     <Platform />
     <Tools />
-    <CtaServices />
+    <Cta isServices = {true}
+    serviceCtaTitle={"Real"}
+    highlight={"Security"}
+    suffix={"Not Just Compliance."}
+    ctaDescription={"Stay ahead of evolving threats with Qutbee’s scalable, real-world security."}
+    primaryBtn={"Explore Services"}
+    secondaryBtn={"Get Free Consultation"}
+    secondaryhref={"/contact"}/>
 </section>
   )
 }

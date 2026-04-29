@@ -22,7 +22,12 @@ export default function HomePage() {
       <Partners />
       <Faq />
       <Blog />
-      <Cta />
+      <Cta ctaTitle="Ready to Transform Your Business?"
+        ctaDescription="Let's discuss how our innovative technology solutions can accelerate your growth and drive success. Get started today with a free consultation."
+        primaryBtn="Get Free Consultation"
+        secondaryBtn="Contact Us Today"
+        secondaryhref={"/contact"}
+      />
     </section>
   );
 }
