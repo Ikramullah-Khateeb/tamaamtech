@@ -166,9 +166,9 @@ export default function Partners() {
       {/* ── Scrolling logo strip ── */}
       <div className="relative z-10 w-full overflow-hidden pb-14 sm:pb-16">
         {/* Left fade */}
-        <div className="pointer-events-none absolute left-0 top-0 h-full w-16 sm:w-28 z-10 bg-gradient-to-r from-white to-transparent" />
+        <div className="pointer-events-none absolute left-0 top-0 h-full w-16 sm:w-28 z-10 bg-linear-to-r from-white to-transparent" />
         {/* Right fade */}
-        <div className="pointer-events-none absolute right-0 top-0 h-full w-16 sm:w-28 z-10 bg-gradient-to-l from-white to-transparent" />
+        <div className="pointer-events-none absolute right-0 top-0 h-full w-16 sm:w-28 z-10 bg-linear-to-l from-white to-transparent" />
 
         <div
           ref={trackRef}
@@ -180,7 +180,7 @@ export default function Partners() {
               title={partner.name}
               className="
                 flex items-center justify-center
-                w-[80px] h-[80px] sm:w-[96px] sm:h-[96px]
+                w-20 h-20 sm:w-24 sm:h-24
                 rounded-2xl
                 bg-white
                 border border-gray-200

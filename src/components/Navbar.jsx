@@ -37,7 +37,7 @@ export default function Navbar() {
             width={0}   // max size (like 350w in srcset)
             height={0}
             sizes="(max-width: 600px) 175px, 350px"
-            className="w-[80px] sm:w-40px] md:w-[60px] h-auto object-contain"
+            className="w-20 sm:w-10 md:w-15 h-auto object-contain"
             priority
           />
         </Link>
