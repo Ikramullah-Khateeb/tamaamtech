@@ -1,3 +1,4 @@
+// Stats.jsx
 "use client";
 
 import { useEffect, useState } from "react";
@@ -11,7 +12,7 @@ export default function Stats() {
   ];
 
   return (
-    <section className="bg-(--primary-color) py-10 sm:py-12 md:py-14 px-4 sm:px-6">
+    <section className="bg-(--primary-color) px-4 sm:px-6 py-8 sm:py-10">
       <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center">
 
         {stats.map((item, index) => (
@@ -45,11 +46,11 @@ function Counter({ end, suffix, label }) {
   }, [end]);
 
   return (
-    <div className="flex flex-col items-center justify-center">
-      <h3 className="text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] font-bold text-(--white) mb-1 sm:mb-2">
+    <div className="flex flex-col items-center justify-center gap-1 sm:gap-0">
+      <h3 className="text-2xl sm:text-3xl md:text-5xl font-bold text-(--white) mb-1 sm:mb-2">
         {count}{suffix}
       </h3>
-      <p className="text-[1rem] sm:text-[1.1rem] md:text-[1.25rem] text-(--off-white) leading-normal">
+      <p className="text-xs sm:text-sm md:text-base lg:text-lg font-medium text-(--off-white) leading-normal">
         {label}
       </p>
     </div>

@@ -1,3 +1,4 @@
+// Cta.jsx
 "use client";
 
 import Link from "next/link";
@@ -13,21 +14,19 @@ export default function Cta({
     secondaryBtn,
     secondaryhref,
 }) {
-
-
     return (
         <section className={`relative overflow-hidden ${isServices ? "bg-white text-[#1e293b]" : "bg-linear-to-br from-[#20283f] to-[#1e40af] text-white"}`}>
-            <div className="max-w-7xl mx-auto px-4 py-24 sm:py-30">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 py-14 sm:py-20 md:py-24">
                 <div className="text-center relative z-10 flex flex-col items-center">
                     {/*  Label  */}
                     {isServices && (
-                        <span className="inline-block py-1.5 px-3 text-sm font-medium text-[#20283f] bg-black/10 uppercase rounded-full mb-4">
+                        <span className="inline-block py-1.5 px-3 text-xs sm:text-sm font-medium text-[#20283f] bg-black/10 uppercase rounded-full mb-4">
                             Go beyond compliance
                         </span>
                     )}
 
                     {/* Title */}
-                    <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-5 ${isServices ? "text-[#1e293b]" : "text-white"}`}>
+                    <h2 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-5 ${isServices ? "text-[#1e293b]" : "text-white"}`}>
                         {isServices ? (
                             <>
                             {serviceCtaTitle}{" "}
@@ -35,28 +34,21 @@ export default function Cta({
                             {suffix}
                             </>
                         ) : (
-                            ctaTitle 
+                            ctaTitle
                         )}
                     </h2>
 
                     {/* Subtitle */}
-                    <p className="text-base md:text-lg lg:text-[22px] max-w-175 mx-auto mb-10 opacity-90 leading-relaxed">
+                    <p className="text-sm sm:text-base md:text-lg lg:text-[22px] max-w-175 mx-auto mb-8 sm:mb-10 opacity-90 leading-relaxed">
                         {ctaDescription}
                     </p>
 
                     {/* Buttons */}
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center w-full sm:w-auto">
                         {/* Primary Button */}
-                        <button className={`flex items-center gap-2 px-6 py-4 text-base font-medium md:text-lg ${isServices ? "bg-linear-to-br from-[#20283f] to-[#3b82f6] text-white" : "bg-white text-[#20283f]"} rounded-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl`}>
+                        <button className={`w-full sm:w-auto flex items-center justify-center gap-2 px-5 sm:px-6 py-3 sm:py-4 text-sm sm:text-base font-medium md:text-lg ${isServices ? "bg-linear-to-br from-[#20283f] to-[#3b82f6] text-white" : "bg-white text-[#20283f]"} rounded-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl`}>
                             <span>{primaryBtn}</span>
-                            <svg
-                                width="20"
-                                height="20"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                            >
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                                 <path d="M7 17L17 7M17 7H7M17 7V17" />
                             </svg>
                         </button>
@@ -64,29 +56,16 @@ export default function Cta({
                         {/* Secondary Button */}
                         <Link
                             href={secondaryhref}
-                            className={`flex items-center gap-2 px-6 py-4 text-base md:text-lg font-medium border ${isServices ? "border-[#20283f] text-[#20283f] hover:bg-[#20283f] hover:text-white" : "border-white text-white hover:bg-white hover:text-[#20283f]"} rounded-md transition-all duration-300`}
+                            className={`w-full sm:w-auto flex items-center justify-center gap-2 px-5 sm:px-6 py-3 sm:py-4 text-sm sm:text-base md:text-lg font-medium border ${isServices ? "border-[#20283f] text-[#20283f] hover:bg-[#20283f] hover:text-white" : "border-white text-white hover:bg-white hover:text-[#20283f]"} rounded-md transition-all duration-300`}
                         >
                             <span>{secondaryBtn}</span>
 
                             {!isServices ? (
-                                <svg
-                                    width="20"
-                                    height="20"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    strokeWidth="2"
-                                >
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                                 </svg>
                             ) : (
-                                <svg
-                                    width="20"
-                                    height="20"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                >
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                                     <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" />
                                 </svg>
                             )}
