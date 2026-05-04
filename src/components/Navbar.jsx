@@ -1,86 +1,93 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Link from "next/link";
-import { FaWhatsapp, FaLinkedinIn, FaEnvelope, FaPhone } from "react-icons/fa";
 import Image from "next/image";
+import { FaWhatsapp, FaLinkedinIn, FaEnvelope, FaPhone } from "react-icons/fa";
+import { FiMenu } from "react-icons/fi";
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const navItems = ["Home", "About", "Services", "Blogs", "Contact"];
 
   return (
-    <nav
-      className={`fixed left-1/2 z-50 w-[90%] max-w-1100px
-      -translate-x-1/2 transition-all duration-300 
-      rounded-2xl border backdrop-blur-xl
-      ${scrolled
-          ? "top-3 bg-white/10 shadow-xl border-white/20"
-          : "top-[5%] bg-white/5 shadow-lg border-white/30"
-        }`}
-    >
+    <nav className="fixed left-1/2 -translate-x-1/2 top-6 z-50 w-[90%] max-w-7xl 
+    rounded-2xl border bg-white/10 backdrop-blur-xl border-white/20 shadow-lg">
+
+      {/* ✅ MOVE INPUT HERE */}
+      <input
+        id="menu-toggle"
+        type="checkbox"
+        className="peer absolute opacity-0"
+      />
+
       <div className="flex items-center justify-between px-6 py-3">
 
         {/* Logo */}
-        <Link href="/" className="flex items-center ml-2">
+        <Link href="/" className="flex items-center">
           <Image
-            src="/tamamtechlogo.png"
-            alt="TamamTechlogo"
-            width={0}   // max size (like 350w in srcset)
-            height={0}
-            sizes="(max-width: 600px) 175px, 350px"
-            className="w-20 sm:w-10 md:w-15 h-auto object-contain"
-            priority
+            src="/tamamlogo.png"
+            alt="Logo"
+            width={140}
+            height={40}
+            className="w-26 h-13 sm:w-28 sm:h-14 md:w-32 md:h-16 object-cover"
           />
         </Link>
 
+        {/* Hamburger */}
+        <label
+          htmlFor="menu-toggle"
+          className="md:hidden text-2xl text-gray-800 cursor-pointer z-50"
+        >
+          <FiMenu />
+        </label>
 
-        {/* Nav Menu */}
-        <div className="hidden md:flex items-center w-full px-5">
+        {/* Desktop Menu */}
+        <div className="hidden md:flex items-center w-full px-6">
 
-          {/* Center Links */}
           <div className="flex gap-8 mx-auto">
-            {["Home", "About", "Services", "Blogs", "Contact"].map((item, i) => (
+            {navItems.map((item) => (
               <Link
-                key={i}
-                href={
-                  item === "Home"
-                    ? "/"
-                    : `/${item.toLowerCase()}`
-                }
-                className="relative text-gray-800 font-medium transition-all duration-300 hover:text-[#20283f]"
+                key={item}
+                href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                className="relative group text-gray-800 font-medium hover:text-[#20283f]"
               >
                 {item}
-
-                {/* underline animation */}
-                <span className="absolute left-0 -bottom-1 w-0 h-2px bg-[#20283f] transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#20283f] transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
           </div>
 
-          {/* Social Icons */}
-          <div className="flex gap-5 items-center">
-            <a href="https://wa.me/+971509853664" target="_blank">
-              <FaWhatsapp className="text-gray-800 hover:text-[#20283f] hover:scale-125 transition" />
-            </a>
-            <a href="https://www.linkedin.com/company/qutbeetechnology/" target="_blank">
-              <FaLinkedinIn className="text-gray-800 hover:text-[#20283f] hover:scale-125 transition" />
-            </a>
-            <a href="mailto:support@qutbee.com">
-              <FaEnvelope className="text-gray-800 hover:text-[#20283f] hover:scale-125 transition" />
-            </a>
-            <a href="tel:+971509853664">
-              <FaPhone className="text-gray-800 hover:text-[#20283f] hover:scale-125 transition" />
-            </a>
+          <div className="hidden lg:flex items-center gap-5">
+            <FaWhatsapp className="text-gray-800 hover:text-[#20283f]" />
+            <FaLinkedinIn className="text-gray-800 hover:text-[#20283f]" />
+            <FaEnvelope className="text-gray-800 hover:text-[#20283f]" />
+            <FaPhone className="text-gray-800 hover:text-[#20283f]" />
           </div>
+        </div>
+      </div>
+
+      {/* ✅ Mobile Menu (must be sibling of peer) */}
+      <div className="md:hidden max-h-0 overflow-hidden transition-all duration-300 
+      peer-checked:max-h-125 peer-checked:opacity-100 opacity-0">
+
+        <div className="px-6 pb-6 flex flex-col items-center gap-4 text-center">
+
+          {navItems.map((item) => (
+            <Link
+              key={item}
+              href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+              className="text-gray-800 font-medium hover:text-[#20283f]"
+            >
+              {item}
+            </Link>
+          ))}
+
+          <div className="flex gap-5 pt-4 border-t border-white/20">
+            <FaWhatsapp className="text-gray-800" />
+            <FaLinkedinIn className="text-gray-800" />
+            <FaEnvelope className="text-gray-800" />
+            <FaPhone className="text-gray-800" />
+          </div>
+
         </div>
       </div>
     </nav>
