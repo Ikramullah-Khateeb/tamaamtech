@@ -1,5 +1,6 @@
 import Cta from "@/components/Cta";
 import Faq from "@/components/Faq";
+import HeroSection from "@/components/HeroSection";
 import Idea from "@/components/Idea";
 import OurServices from "@/components/OurServices";
 import Partners from "@/components/Partners";
@@ -12,6 +13,7 @@ import WhoWeAre from "@/components/WhoWeAre";
 export default function HomePage() {
   return (
     <section>
+      <HeroSection />
       <OurServices />
       <WhoWeAre />
       <Stats />
