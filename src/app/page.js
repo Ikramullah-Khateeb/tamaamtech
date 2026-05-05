@@ -1,8 +1,5 @@
-import Blog from "@/components/Blog";
 import Cta from "@/components/Cta";
 import Faq from "@/components/Faq";
-import Founder from "@/components/Founder";
-import HeroSectionNew from "@/components/HeroSectionNew";
 import OurServices from "@/components/OurServices";
 import Partners from "@/components/Partners";
 import Stats from "@/components/Stats";
@@ -14,14 +11,11 @@ import WhoWeAre from "@/components/WhoWeAre";
 export default function HomePage() {
   return (
     <section>
-      <HeroSectionNew />
       <OurServices />
       <WhoWeAre />
       <Stats />
-      <Founder />
       <Partners />
       <Faq />
-      <Blog />
       <Cta ctaTitle="Ready to Transform Your Business?"
         ctaDescription="Let's discuss how our innovative technology solutions can accelerate your growth and drive success. Get started today with a free consultation."
         primaryBtn="Get Free Consultation"

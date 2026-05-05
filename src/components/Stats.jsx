@@ -12,7 +12,7 @@ export default function Stats() {
   ];
 
   return (
-    <section className="bg-(--primary-color) px-4 sm:px-6 py-8 sm:py-10">
+    <section className="bg-gradient-to-r from-green-600 to-green-800 px-4 sm:px-6 py-8 sm:py-10">
       <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center">
 
         {stats.map((item, index) => (
