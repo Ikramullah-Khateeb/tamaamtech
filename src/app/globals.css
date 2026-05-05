@@ -1,8 +1,10 @@
 @import "tailwindcss";
 
+
 @layer base {
   :root {
-    --primary-color: #20283f;
+    --primary-color: #01cb58;
+    /*#20283f*/
     --white: #ffffff;
     --off-white: #f8fafc;
     --text-dark: #1e293b;
@@ -16,7 +18,7 @@
     --font-heading: var(--font-nata-sans);
   }
 
-  @theme inline {
+  @theme  inline {
     --font-sans: var(--font-body);
     --font-heading: var(--font-heading);
   }

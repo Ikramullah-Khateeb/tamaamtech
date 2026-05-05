@@ -4,85 +4,109 @@ import { IoHardwareChip } from "react-icons/io5";
 import { FaMobileAlt, FaCloud, FaBullhorn, FaServer, FaShieldAlt } from "react-icons/fa";
 
 const hoverOn = (e) => {
-    e.currentTarget.style.transform = 'translateY(-6px)'
-    e.currentTarget.style.boxShadow = '0 16px 48px 0 rgba(31,38,135,0.35)'
-    e.currentTarget.style.borderColor = 'rgba(255,255,255,0.5)'
+    e.currentTarget.style.transform = 'translateY(-4px)'
 }
 
 const hoverOff = (e) => {
     e.currentTarget.style.transform = 'translateY(0px)'
-    e.currentTarget.style.boxShadow = '0 8px 32px 0 rgba(31,38,135,0.2)'
-    e.currentTarget.style.borderColor = 'rgba(255,255,255,0.25)'
 }
 
-const cardClass = 'flex flex-col items-start justify-start p-8 bg-white/15 backdrop-blur-[20px] border border-white/25 shadow-(--shadow-large) rounded-3xl'
-const cardStyle = { transition: 'transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease', cursor: 'default' }
+const cardClass = 'flex flex-col items-start justify-start bg-white rounded-2xl p-5 sm:p-6 md:p-8 shadow-(--shadow-large)'
+const cardStyle = { transition: 'transform 0.25s ease' }
 
 export default function OurServices() {
     return (
-        <section className='mx-auto py-20 px-6 md:px-16'>
-            <div className=''>
-                <div className="text-[28px] sm:text-[32px] lg:text-[44.8px] font-bold text-center mb-8 sm:mb-10 md:mb-12 pt-8 sm:pt-10 md:pt-12 tracking-[-1px] bg-linear-to-r from-(--primary-color) to-[#3b82f6] bg-clip-text text-transparent">
-                    <h2>What We Engineer & Execute</h2>
-                </div>
-                <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 '>
+        <section className='bg-[#eef1f7] px-4 sm:px-6 py-14 sm:py-20'>
+            <div className='max-w-7xl mx-auto text-center'>
+
+                {/* Heading */}
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold sm:font-bold leading-tight tracking-tight bg-gradient-to-r from-[#20283f] to-[#01cb58] bg-clip-text text-transparent">
+                    What We Engineer & Execute
+                </h2>
+
+                {/* Grid */}
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mt-10 sm:mt-14'>
 
                     <div className={cardClass} style={cardStyle} onMouseEnter={hoverOn} onMouseLeave={hoverOff}>
-                        <div className='mb-6'>
-                            <span className='text-[28px] bg-(--primary-color) rounded-full p-3 h-15 w-15 flex items-center justify-center text-(--white)'><IoHardwareChip /></span>
+                        <div className='mb-4'>
+                            <span className='text-xl sm:text-2xl bg-(--primary-color) rounded-full p-2.5 h-12 w-12 flex items-center justify-center text-(--white)'>
+                                <IoHardwareChip />
+                            </span>
                         </div>
-                        <h3 className='text-2xl font-semibold mb-2'>AI Powered Solutions</h3>
-                        <div className='leading-normal text-sm'>
+                        <h3 className='text-base sm:text-lg md:text-xl font-semibold mb-2 text-left text-(--primary-color) '>
+                            AI Powered Solutions
+                        </h3>
+                        <div className='text-sm sm:text-base font-medium text-(--text-dark) text-left leading-relaxed'>
                             We design and deploy intelligent systems that automate processes, enhance decision-making, and deliver measurable business impact.
                         </div>
                     </div>
 
                     <div className={cardClass} style={cardStyle} onMouseEnter={hoverOn} onMouseLeave={hoverOff}>
-                        <div className='mb-6'>
-                            <span className='text-[28px] bg-(--primary-color) rounded-full p-3 h-15 w-15 flex items-center justify-center text-(--white)'><FaMobileAlt /></span>
+                        <div className='mb-4'>
+                            <span className='text-xl sm:text-2xl bg-(--primary-color) rounded-full p-2.5 h-12 w-12 flex items-center justify-center text-(--white)'>
+                                <FaMobileAlt />
+                            </span>
                         </div>
-                        <h3 className='text-2xl font-semibold mb-2'>Web and Mobile Apps</h3>
-                        <div className='leading-normal text-sm'>
+                        <h3 className='text-base sm:text-lg md:text-xl font-semibold mb-2 text-left text-(--primary-color) '>
+                            Web and Mobile Apps
+                        </h3>
+                        <div className='text-sm sm:text-base font-medium text-(--text-dark) text-left leading-relaxed'>
                             Custom-built, user-friendly applications that combine functionality, speed, and design to deliver exceptional digital experiences.
                         </div>
                     </div>
 
                     <div className={cardClass} style={cardStyle} onMouseEnter={hoverOn} onMouseLeave={hoverOff}>
-                        <div className='mb-6'>
-                            <span className='text-[28px] bg-(--primary-color) rounded-full p-3 h-15 w-15 flex items-center justify-center text-(--white)'><FaCloud /></span>
+                        <div className='mb-4'>
+                            <span className='text-xl sm:text-2xl bg-(--primary-color) rounded-full p-2.5 h-12 w-12 flex items-center justify-center text-(--white)'>
+                                <FaCloud />
+                            </span>
                         </div>
-                        <h3 className='text-2xl font-semibold mb-2'>Cloud Services (Google/Azure/AWS)</h3>
-                        <div className='leading-normal text-sm'>
+                        <h3 className='text-base sm:text-lg md:text-xl font-semibold mb-2 text-left text-(--primary-color) '>
+                            Cloud Services (Google/Azure/AWS)
+                        </h3>
+                        <div className='text-sm sm:text-base font-medium text-(--text-dark) text-left leading-relaxed'>
                             Secure cloud architecture, migration, and management across leading platforms to ensure scalability, reliability, and efficiency.
                         </div>
                     </div>
 
                     <div className={cardClass} style={cardStyle} onMouseEnter={hoverOn} onMouseLeave={hoverOff}>
-                        <div className='mb-6'>
-                            <span className='text-[28px] bg-(--primary-color) rounded-full p-3 h-15 w-15 flex items-center justify-center text-(--white)'><FaBullhorn /></span>
+                        <div className='mb-4'>
+                            <span className='text-xl sm:text-2xl bg-(--primary-color) rounded-full p-2.5 h-12 w-12 flex items-center justify-center text-(--white)'>
+                                <FaBullhorn />
+                            </span>
                         </div>
-                        <h3 className='text-2xl font-semibold mb-2'>Digital Marketing and Social Media</h3>
-                        <div className='leading-normal text-sm'>
+                        <h3 className='text-base sm:text-lg md:text-xl font-semibold mb-2 text-left text-(--primary-color) '>
+                            Digital Marketing and Social Media
+                        </h3>
+                        <div className='text-sm sm:text-base font-medium text-(--text-dark) text-left leading-relaxed'>
                             Data-driven campaigns and creative strategies that boost your online presence, engage your audience, and drive conversions.
                         </div>
                     </div>
 
                     <div className={cardClass} style={cardStyle} onMouseEnter={hoverOn} onMouseLeave={hoverOff}>
-                        <div className='mb-6'>
-                            <span className='text-[28px] bg-(--primary-color) rounded-full p-3 h-15 w-15 flex items-center justify-center text-(--white)'><FaServer /></span>
+                        <div className='mb-4'>
+                            <span className='text-xl sm:text-2xl bg-(--primary-color) rounded-full p-2.5 h-12 w-12 flex items-center justify-center text-(--white)'>
+                                <FaServer />
+                            </span>
                         </div>
-                        <h3 className='text-2xl font-semibold mb-2'>IT Infra and TechOps Solutions</h3>
-                        <div className='leading-normal text-sm'>
+                        <h3 className='text-base sm:text-lg md:text-xl font-semibold mb-2 text-left text-(--primary-color) '>
+                            IT Infra and TechOps Solutions
+                        </h3>
+                        <div className='text-sm sm:text-base font-medium text-(--text-dark) text-left leading-relaxed'>
                             Robust infrastructure design and technology operations support to keep your business systems secure, optimized, and running smoothly.
                         </div>
                     </div>
 
                     <div className={cardClass} style={cardStyle} onMouseEnter={hoverOn} onMouseLeave={hoverOff}>
-                        <div className='mb-6'>
-                            <span className='text-[28px] bg-(--primary-color) rounded-full p-3 h-15 w-15 flex items-center justify-center text-(--white)'><FaShieldAlt /></span>
+                        <div className='mb-4'>
+                            <span className='text-xl sm:text-2xl bg-(--primary-color) rounded-full p-2.5 h-12 w-12 flex items-center justify-center text-(--white)'>
+                                <FaShieldAlt />
+                            </span>
                         </div>
-                        <h3 className='text-2xl font-semibold mb-2'>Cybersecurity & Threat Protection</h3>
-                        <div className='leading-normal text-sm'>
+                        <h3 className='text-base sm:text-lg md:text-xl font-semibold mb-2 text-left text-(--primary-color) '>
+                            Cybersecurity & Threat Protection
+                        </h3>
+                        <div className='text-sm sm:text-base font-medium text-(--text-dark) text-left leading-relaxed'>
                             Threat detection, network penetration testing, and cloud security assessments to safeguard your business.
                         </div>
                     </div>

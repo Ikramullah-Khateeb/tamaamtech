@@ -12,7 +12,6 @@ export default function Navbar() {
     <nav className="fixed left-1/2 -translate-x-1/2 top-6 z-50 w-[90%] max-w-7xl 
     rounded-2xl border bg-white/10 backdrop-blur-xl border-white/20 shadow-lg">
 
-      {/* ✅ MOVE INPUT HERE */}
       <input
         id="menu-toggle"
         type="checkbox"
@@ -48,24 +47,24 @@ export default function Navbar() {
               <Link
                 key={item}
                 href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                className="relative group text-gray-800 font-medium hover:text-[#20283f]"
+                className="relative group text-gray-800 font-medium hover:text-[#01cb58]"
               >
                 {item}
-                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#20283f] transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#01cb58] transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
           </div>
 
           <div className="hidden lg:flex items-center gap-5">
-            <FaWhatsapp className="text-gray-800 hover:text-[#20283f]" />
-            <FaLinkedinIn className="text-gray-800 hover:text-[#20283f]" />
-            <FaEnvelope className="text-gray-800 hover:text-[#20283f]" />
-            <FaPhone className="text-gray-800 hover:text-[#20283f]" />
+            <FaWhatsapp className="text-gray-800 hover:text-[#01cb58]" />
+            <FaLinkedinIn className="text-gray-800 hover:text-[#01cb58]" />
+            <FaEnvelope className="text-gray-800 hover:text-[#01cb58]" />
+            <FaPhone className="text-gray-800 hover:text-[#01cb58]" />
           </div>
         </div>
       </div>
 
-      {/* ✅ Mobile Menu (must be sibling of peer) */}
+      {/* Mobile Menu */}
       <div className="md:hidden max-h-0 overflow-hidden transition-all duration-300 
       peer-checked:max-h-125 peer-checked:opacity-100 opacity-0">
 
@@ -75,17 +74,17 @@ export default function Navbar() {
             <Link
               key={item}
               href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-              className="text-gray-800 font-medium hover:text-[#20283f]"
+              className="text-gray-800 font-medium hover:text-[#01cb58]"
             >
               {item}
             </Link>
           ))}
 
           <div className="flex gap-5 pt-4 border-t border-white/20">
-            <FaWhatsapp className="text-gray-800" />
-            <FaLinkedinIn className="text-gray-800" />
-            <FaEnvelope className="text-gray-800" />
-            <FaPhone className="text-gray-800" />
+            <FaWhatsapp className="text-gray-800 hover:text-[#01cb58]" />
+            <FaLinkedinIn className="text-gray-800 hover:text-[#01cb58]" />
+            <FaEnvelope className="text-gray-800 hover:text-[#01cb58]" />
+            <FaPhone className="text-gray-800 hover:text-[#01cb58]" />
           </div>
 
         </div>

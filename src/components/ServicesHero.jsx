@@ -1,110 +1,116 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
+function Counter({ target, suffix = "" }) {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let start = 0;
+    const duration = 1200;
+    const increment = target / (duration / 16);
+
+    const counter = setInterval(() => {
+      start += increment;
+      if (start >= target) {
+        setCount(target);
+        clearInterval(counter);
+      } else {
+        setCount(Math.floor(start));
+      }
+    }, 16);
+
+    return () => clearInterval(counter);
+  }, [target]);
+
+  return (
+    <span>
+      {count}
+      {suffix}
+    </span>
+  );
+}
+
 export default function ServicesHero() {
   return (
-    <section className="relative flex items-center min-h-screen overflow-hidden bg-gradient-to-br from-[#f8fafc] to-[#ffffff]">
+    <section className="relative overflow-hidden px-4 sm:px-6 pt-24 sm:pt-36 md:pt-52 pb-14 sm:pb-20 md:pb-28 text-center bg-white">
 
-      {/* SVG Background (UNCHANGED) */}
-      <div className="absolute inset-0 pointer-events-none">
-        <svg viewBox="0 0 960 540" className="absolute w-full h-full">
-          <g strokeWidth="1" strokeLinejoin="bevel">
-            <path d="M422.4 405L532.6 540L542.6 401Z" fill="#ffffff" />
-            <path d="M542.6 401L688.7 389L544.6 281Z" fill="#ffffff" />
-            <path d="M280.3 416L423.4 540L422.4 405Z" fill="#ffffff" />
-            <path d="M422.4 405L423.4 540L532.6 540Z" fill="#ffffff" />
-            <path d="M699.7 540L688.7 389L542.6 401Z" fill="#ffffff" />
-            <path d="M532.6 540L699.7 540L542.6 401Z" fill="#ffffff" />
-            <path d="M688.7 389L810.9 257L671.7 267Z" fill="#ffffff" />
-            <path d="M152.1 540L260.3 540L280.3 416Z" fill="#ffffff" />
-            <path d="M280.3 416L260.3 540L423.4 540Z" fill="#ffffff" />
-            <path d="M261.3 260L147.1 394L280.3 416Z" fill="#ffffff" />
-            <path d="M138.1 279L147.1 394L261.3 260Z" fill="#ffffff" />
-            <path d="M836.9 420L810.9 257L688.7 389Z" fill="#ffffff" />
-          </g>
-        </svg>
-      </div>
+      {/* Grid Background (same as AboutHero) */}
+      <div
+        className="absolute inset-0 opacity-20 pointer-events-none"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px)",
+          backgroundSize: "55px 55px",
+        }}
+      />
 
       {/* Content */}
-      <div className="relative z-10 max-w-[1200px] mx-auto px-[20px] text-center">
+      <div className="relative max-w-7xl mx-auto text-center">
 
         {/* Badge */}
-        <div className="inline-flex items-center gap-[0.5rem] bg-[rgba(59,130,246,0.1)] text-[#3b82f6] px-[1rem] py-[0.5rem] rounded-[2rem] text-[0.875rem] font-[500] mb-[2rem]">
-          <svg viewBox="0 0 24 24" className="w-[1rem] h-[1rem]" fill="none" stroke="currentColor" strokeWidth="2">
-            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-          </svg>
-          <span>ISO27001</span>
+
+        <div className="inline-flex items-center gap-2 bg-[rgba(59,130,246,0.1)] text-[#3b82f6] px-3 sm:px-4 py-1.5 sm:py-2 rounded-4xl text-xs sm:text-[0.875rem] font-medium">
+          <span> Our Services</span>
         </div>
 
-        {/* 🔥 UPDATED HEADING */}
-        <h1 className="text-[1.9rem] sm:text-[2.5rem] md:text-[3.5rem] font-[700] leading-[1.2] mb-[16px] text-[#1e293b]">
-          We Don’t Simulate Threats <br />
-          <span className="bg-[linear-gradient(135deg,#20283f,#3b82f6)] bg-clip-text text-transparent">
-            We Expose Them
+        <h1 className="mt-6 text-xl sm:text-3xl md:text-5xl font-semibold sm:font-bold leading-tight tracking-[-1px] bg-linear-to-r from-(--primary-color) to-[#01cb58] bg-clip-text text-transparent">
+          We Don’t{" "}
+          <span className="relative inline-block">
+            <span className="absolute inset-0 blur-xl bg-[#01cb58]/30 rounded-full"></span>
+            <span className="inline-block pr-2 bg-linear-to-r from-(--primary-color) to-(--text-dark) bg-clip-text text-transparent italic">
+              Simulate
+            </span>
           </span>
+          <br className="hidden sm:block" />
+          Threats We Expose Them
         </h1>
-
-        {/* 🔥 UPDATED SUBTEXT */}
-        <p className="text-[16px] sm:text-[18px] text-[#64748b] mb-[36px] max-w-[700px] mx-auto font-[500]">
-          Our experts go beyond surface-level scans to identify real-world vulnerabilities attackers are most likely to exploit.
+ 
+        <p className="text-sm sm:text-base md:text-lg lg:text-[22px] max-w-4xl mx-auto py-4 font-medium text-(--text-light)">
+          From design to deployment, marketing to maintenance — we deliver end-to-end digital solutions.
         </p>
 
-        {/* Buttons */}
-        <div className="flex justify-center gap-4 flex-wrap mt-4">
 
-          {/* Primary Button */}
-          <button className="
-    group flex items-center gap-2
-    px-7 py-3
-    bg-[#1e293b] text-white
-    rounded-lg font-medium
-    shadow-[0_10px_25px_rgba(0,0,0,0.15)]
-    hover:shadow-[0_15px_35px_rgba(0,0,0,0.25)]
-    hover:-translate-y-0.5
-    transition-all duration-300
-  ">
-            See How We Work
-            <span className="transition-transform group-hover:translate-x-1">
-              →
-            </span>
-          </button>
+        {/* Stats Cards */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 mt-10 sm:mt-12 px-4 sm:px-0">
 
-          {/* Secondary Button */}
-          <button className="
-    px-7 py-3
-    border border-[#1e293b]
-    text-[#1e293b]
-    rounded-lg font-medium
-    bg-white
-    shadow-[0_4px_12px_rgba(0,0,0,0.05)]
-    hover:bg-[#1e293b]
-    hover:text-white
-    hover:shadow-[0_10px_25px_rgba(0,0,0,0.15)]
-    hover:-translate-y-0.5
-    transition-all duration-300
-  ">
-            Get Free Consultation
-          </button>
+          <div className="bg-gray-100 rounded-2xl py-6 sm:py-8 px-4 sm:px-6 lg:px-8 text-center shadow-sm ">
+            <h3 className="text-2xl sm:text-3xl md:text-5xl font-bold text-[#01cb58] mb-1 sm:mb-2">
+              <Counter target={10} suffix="+" />
+            </h3>
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg font-medium text-gray-600 leading-normal">
+              Service Categories
+            </p>
+          </div>
+
+          <div className="bg-gray-100 rounded-2xl py-6 sm:py-8 px-4 sm:px-6 lg:px-8 text-center shadow-sm ">
+            <h3 className="text-2xl sm:text-3xl md:text-5xl font-bold text-[#01cb58] mb-1 sm:mb-2">
+              <Counter target={65} suffix="+" />
+            </h3>
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg font-medium text-gray-600 leading-normal">
+              Sub-Services
+            </p>
+          </div>
+
+          <div className="bg-gray-100 rounded-2xl py-6 sm:py-8 px-4 sm:px-6 lg:px-8 text-center shadow-sm ">
+            <h3 className="text-2xl sm:text-3xl md:text-5xl font-bold text-[#01cb58] mb-1 sm:mb-2">
+              <Counter target={750} suffix="+" />
+            </h3>
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg font-medium text-gray-600 leading-normal">
+              Projects Delivered
+            </p>
+          </div>
+
+          <div className="bg-gray-100 rounded-2xl py-6 sm:py-8 px-4 sm:px-6 lg:px-8 text-center shadow-sm ">
+            <h3 className="text-2xl sm:text-3xl md:text-5xl font-bold text-[#01cb58] mb-1 sm:mb-2">
+              <Counter target={15} suffix="+" />
+            </h3>
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg font-medium text-gray-600 leading-normal">
+              Countries Served
+            </p>
+          </div>
 
         </div>
-
-        {/* 🔥 Arrow FIX */}
-        <div className="mt-14 flex justify-center animate-bounce">
-          <svg
-            width="28"
-            height="28"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="#1e293b"
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M6 9l6 6 6-6" />
-            <path d="M6 15l6 6 6-6" />
-          </svg>
-        </div>
-
-
       </div>
     </section>
   );
