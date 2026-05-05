@@ -15,7 +15,10 @@ export default function Cta({
     secondaryhref,
 }) {
     return (
-        <section className={`relative overflow-hidden ${isServices ? "bg-white text-[#1e293b]" : "bg-linear-to-br from-[#20283f] to-[#1e40af] text-white"}`}>
+        <section className={`relative overflow-hidden ${isServices
+                ? "bg-white text-[#1e293b]"
+                : "bg-linear-to-br from-black to-[#01cb58] text-white"
+            }`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 py-14 sm:py-20 md:py-24">
                 <div className="text-center relative z-10 flex flex-col items-center">
                     {/*  Label  */}
@@ -29,9 +32,9 @@ export default function Cta({
                     <h2 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-5 ${isServices ? "text-[#1e293b]" : "text-white"}`}>
                         {isServices ? (
                             <>
-                            {serviceCtaTitle}{" "}
-                            <span className="bg-linear-to-br from-[#20283f] to-[#3b82f6] bg-clip-text text-transparent">{highlight}</span>{" "}
-                            {suffix}
+                                {serviceCtaTitle}{" "}
+                                <span className="bg-linear-to-br from-[#20283f] to-[#3b82f6] bg-clip-text text-transparent">{highlight}</span>{" "}
+                                {suffix}
                             </>
                         ) : (
                             ctaTitle

@@ -20,12 +20,12 @@ export default function CyberSecurity() {
     },
     {
       icon: FaCrosshairs,
-      title: "Threat Detection & Protection",
+      title: "Advanced Threat Detection & Protection",
       text: "Advanced monitoring tools detect threats in real-time, allowing us to neutralize risks before they escalate. Stay one step ahead with proactive defense.",
     },
     {
       icon: FaCloud,
-      title: "Cloud Security Assessments",
+      title: "Advanced Cloud Security Assessments",
       text: "We evaluate your cloud environment for security gaps and compliance risks. From configuration to access controls, we ensure your data remains safe in the cloud.",
     },
     {
@@ -35,49 +35,40 @@ export default function CyberSecurity() {
     },
     {
       icon: FaUserLock,
-      title: "Access Control Management",
-      text: "We design and implement robust access policies to protect sensitive systems and data.",
+      title: "Secure Access Control Management",
+      text: "We design and implement robust access policies to protect sensitive systems and data. Ensuring only authorized users get the right access at the right time.",
     },
     {
       icon: FaClipboardCheck,
-      title: "Compliance Services",
-      text: "From GDPR to ISO standards, we help your organization meet regulatory and industry-specific requirements.",
-    },
-    {
-      icon: FaGraduationCap,
-      title: "Cybersecurity Training",
-      text: "We empower your team with knowledge to identify, prevent, and respond to cyber threats.",
+      title: "Regulatory Compliance Services",
+      text: "From GDPR to ISO standards, we help your organization meet regulatory and industry-specific requirements. Ensuring continuous compliance with evolving standards.",
     },
   ];
 
   return (
-    <section className="bg-white text-[#1e293b] py-16 sm:py-20 lg:py-24 px-4 sm:px-6">
-      
+    <section className="bg-white px-4 sm:px-6 py-14 sm:py-20 text-[#1e293b]">
+
       {/* Container */}
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl text-center mx-auto">
 
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          
-          <span className="inline-block py-1.5 px-3 text-xs sm:text-sm font-medium text-[#20283f] bg-black/10 uppercase rounded-full mb-4">
-            The Complete Cybersecurity Platform
-          </span>
-
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
-            All Your Security Tools.{" "}
-            <span className="bg-gradient-to-br from-[#20283f] to-[#3b82f6] bg-clip-text text-transparent">
-              One Unified Platform
-            </span>
-          </h2>
-
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-[#475569] leading-relaxed">
-            Qutbee Technologies brings essential security and compliance
-            features into a single, streamlined interface.
-          </p>
+        <div className="inline-flex items-center gap-2 bg-[rgba(59,130,246,0.1)] text-[#3b82f6] px-3 sm:px-4 py-1.5 sm:py-2 rounded-4xl text-xs sm:text-[0.875rem] font-medium">
+          <span>The Complete Cybersecurity Platform</span>
         </div>
 
+        {/* Heading */}
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold sm:font-bold leading-tight tracking-[-1px] bg-linear-to-r from-(--primary-color) to-[#3b82f6] bg-clip-text text-transparent">
+          All Your Security Tools.<br />
+          One Unified Platform
+
+        </h2>
+
+        {/* Subtext */}
+        <p className="text-sm sm:text-base md:text-lg lg:text-[22px] max-w-4xl mx-auto py-4 font-medium text-(--text-light)">
+          Qutbee Technologies brings essential security and compliance features into a single, streamlined interface.
+        </p>
+
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className=" mt-10 sm:mt-12 md:mt-14  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {items.map((item, index) => {
             const Icon = item.icon;
 
@@ -85,32 +76,33 @@ export default function CyberSecurity() {
               <div
                 key={index}
                 className="
-                  backdrop-blur-xl bg-white/70
-                  border border-gray-200 hover:border-black
+                  flex flex-col items-start justify-start
+                  p-5 sm:p-6 md:p-8
+                  bg-white
+                  border border-gray-200
                   rounded-2xl
-                  p-5 sm:p-6
-                  shadow-[0_8px_32px_rgba(0,0,0,0.08)]
-                  hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)]
+                  shadow-(--shadow-large)
                   transition-all duration-300
                   hover:-translate-y-1
                 "
               >
-                <div className="flex items-start gap-3 sm:gap-4">
+                <div>
 
-                  {/* Icon */}
-                  <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-br from-[#20283f] to-[#3b82f6] text-white shrink-0">
-                    <Icon size={18} />
-                  </div>
+                  {/* Top Row: Icon + Title */}
+                  <div className="flex items-start gap-3 sm:gap-4">
+                    <div className="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-[#20283f] text-white shrink-0">
+                      <Icon size={16} />
+                    </div>
 
-                  {/* Content */}
-                  <div>
-                    <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-1 sm:mb-2">
+                    <h3 className="text-base sm:text-lg md:text-xl font-semibold text-left">
                       {item.title}
                     </h3>
-                    <p className="text-sm sm:text-base text-[#475569] leading-relaxed">
-                      {item.text}
-                    </p>
                   </div>
+
+                  {/* Full-width paragraph */}
+                  <p className="mt-2 text-sm sm:text-base font-medium text-(--text-dark) leading-relaxed text-left">
+                    {item.text}
+                  </p>
 
                 </div>
               </div>

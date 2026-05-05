@@ -1,5 +1,6 @@
 import Cta from "@/components/Cta";
 import Faq from "@/components/Faq";
+import Idea from "@/components/Idea";
 import OurServices from "@/components/OurServices";
 import Partners from "@/components/Partners";
 import Stats from "@/components/Stats";
@@ -14,6 +15,7 @@ export default function HomePage() {
       <OurServices />
       <WhoWeAre />
       <Stats />
+      <Idea />
       <Partners />
       <Faq />
       <Cta ctaTitle="Ready to Transform Your Business?"

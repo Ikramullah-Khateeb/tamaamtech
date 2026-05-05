@@ -27,62 +27,60 @@ export default function Platform() {
   ];
 
   return (
-    <section className="bg-white py-12 sm:py-16 md:py-15 px-4 sm:px-6">
-      
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-white px-4 sm:px-6 py-14 sm:py-20">
 
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12 md:mb-16">
-          
-          <span className="inline-block px-3 py-1.5 text-[11px] sm:text-xs md:text-[12px] font-semibold tracking-[1px] text-[#20283f] bg-black/10 rounded-full mb-3 sm:mb-4">
-            ALL IN ONE PLATFORM
-          </span>
+      <div className="max-w-7xl mx-auto text-center">
 
-          {/* 👇 DESKTOP SAME */}
-          <h2 className="text-2xl sm:text-3xl md:text-[32px] font-bold mb-3 sm:mb-4 md:mb-4 text-[#20283f]">
-            Security. Compliance. Clarity.
-          </h2>
-
-          <p className="text-sm sm:text-base md:text-[20px] text-[#64748b] leading-relaxed">
-            Qutbee Technologies simplifies cybersecurity by combining essential
-            security and compliance tools in one interface.
-          </p>
+        <div className="inline-flex items-center gap-2 bg-[rgba(59,130,246,0.1)] text-[#3b82f6] px-3 sm:px-4 py-1.5 sm:py-2 rounded-4xl text-xs sm:text-[0.875rem] font-medium">
+          <span>ALL IN ONE PLATFORM</span>
         </div>
+
+        {/* Heading */}
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold sm:font-bold leading-tight tracking-[-1px] bg-linear-to-r from-(--primary-color) to-[#3b82f6] bg-clip-text text-transparent">
+          Security. Compliance. Clarity.
+        </h2>
+
+        {/* Subtext */}
+        <p className="text-sm sm:text-base md:text-lg lg:text-[22px] max-w-4xl mx-auto py-4 font-medium text-(--text-light)">
+          Qutbee Technologies simplifies cybersecurity by combining essential
+          security and compliance tools in one interface.
+          </p>
 
         {/* Content */}
         <div>
-          
-          {/* 👇 DESKTOP SAME */}
-          <h3 className="text-xl sm:text-2xl md:text-[32px] font-bold mb-3 sm:mb-4 md:mb-4 text-[#20283f]">
+
+          {/* Sub Heading */}
+          <h3 className=" mt-10 sm:mt-12 md:mt-14 text-base sm:text-2xl md:text-3xl font-semibold leading-tight tracking-[-1px] text-(--primary-color) text-left">
             Everything You Need in One Place
           </h3>
 
-          <div className="w-7.5 sm:w-8.75 md:w-10 h-0.5 bg-[#20283f] mb-6 sm:mb-8 md:mb-8"></div>
+          <div className="w-8 sm:w-10 h-0.5 bg-[#20283f] mb-6 sm:mb-8"></div>
 
-          {/* Cards */}
-          <div className="space-y-6 sm:space-y-7 md:space-y-6">
-            {items.map((item, index) => {
-              const Icon = item.icon;
+          {/* Items */}
+<div className="space-y-5 sm:space-y-6">
+  {items.map((item, index) => {
+    const Icon = item.icon;
 
-              return (
-                <div key={index} className="flex items-start gap-4 sm:gap-5 md:gap-7">
-                  
-                  {/* Icon - desktop SAME */}
-                  <div className="text-[#20283f] text-xl sm:text-2xl md:text-[30px] mt-1 shrink-0">
-                    <Icon />
-                  </div>
+    return (
+      <div key={index} className="flex items-start gap-3 sm:gap-4">
 
-                  {/* Text - desktop SAME */}
-                  <p className="text-base sm:text-lg md:text-[26px] text-[#64748b] leading-relaxed">
-                    <span className="font-bold text-[#20283f]">
-                      {item.title}{" "}
-                    </span>
-                    {item.text}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
+        {/* Icon */}
+        <div className="text-base sm:text-xl font-semibold text-(--primary-color) mt-1">
+          <Icon />
+        </div>
+
+        {/* Text */}
+        <p className="text-base sm:text-xl text-left font-medium text-(--text-light)">
+          <strong className="text-(--primary-color) font-semibold " >
+            {item.title}
+          </strong>{" "}
+          {item.text}
+        </p>
+
+      </div>
+    );
+  })}
+</div>
 
         </div>
       </div>
