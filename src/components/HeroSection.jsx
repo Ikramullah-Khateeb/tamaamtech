@@ -20,7 +20,7 @@ function BrowserBar({ url }) {
       <span className="w-2 h-2 rounded-full bg-[#ff5f57]" />
       <span className="w-2 h-2 rounded-full bg-[#febe2e]" />
       <span className="w-2 h-2 rounded-full bg-[#01cb58]" />
-      <span className="ml-2 font-mono text-[8px] truncate text-white/30">{url}</span>
+      <span className="ml-2 text-[8px] truncate text-white/30">{url}</span>
     </div>
   );
 }
@@ -160,7 +160,6 @@ export default function HeroSection() {
   return (
     <section className="relative overflow-hidden px-4 sm:px-6 pt-24 sm:pt-28 bg-white">
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@300;400;500;600&display=swap');
 
         @keyframes scroll-up {
           from { transform: translateY(0); }
@@ -178,9 +177,6 @@ export default function HeroSection() {
           0%,100% { box-shadow: 0 0 0 0 rgba(1,203,88,.35); }
           50%      { box-shadow: 0 0 0 7px rgba(1,203,88,0); }
         }
-
-        .hero-font-body    { font-family: 'Barlow', sans-serif; }
-        .hero-font-heading { font-family: 'Barlow Condensed', 'Barlow', sans-serif; }
 
         .hero-shimmer {
           background: linear-gradient(90deg,#00a346 0%,#000 30%,#01cb58 50%,#000 70%,#00a346 100%);
@@ -220,12 +216,12 @@ export default function HeroSection() {
         >
 
           {/* ── LEFT: Text content ── */}
-          <div className="flex flex-col gap-3 sm:gap-2 pb-12 pt-20 hero-font-body items-center text-center min-[840px]:items-start min-[840px]:text-left">
+          <div className="flex flex-col gap-3 sm:gap-2 pb-12 pt-20 items-center text-center min-[840px]:items-start min-[840px]:text-left">
             <div className="hero-badge-glow inline-flex w-fit items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-[rgba(1,203,88,0.08)] border border-[rgba(1,203,88,0.35)] text-[#00a346] mb-2 sm:mb-1">
               Our Web Development – Fast, Scalable &amp; Maintainable.
             </div>
 
-            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.15] tracking-tight text-gray-900 hero-font-heading mt-1 mb-2 sm:mb-1">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.15] tracking-tight text-gray-900 mt-1 mb-2 sm:mb-1">
               Web Design{" "}
               <span className="relative inline-block">
                 <span className="absolute inset-0 blur-xl rounded-full bg-[rgba(1,203,88,0.2)]" />
