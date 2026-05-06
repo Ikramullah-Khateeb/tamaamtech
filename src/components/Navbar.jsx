@@ -17,7 +17,7 @@ export default function Navbar() {
     <nav
       className="fixed left-1/2 -translate-x-1/2 top-6 z-50 w-[90%] max-w-7xl
   rounded-2xl border bg-white/95 backdrop-blur-xl border-white/20
-  shadow-[0_10px_30px_rgba(1,203,88,0.15),0_4px_12px_rgba(0,0,0,0.08)]"
+ shadow-[0_6px_18px_rgba(1,203,88,0.12),0_2px_6px_rgba(0,0,0,0.06)]"
     >
       {/* toggle */}
       <input id="menu-toggle" type="checkbox" className="peer hidden" />
@@ -49,7 +49,7 @@ export default function Navbar() {
               <Link
                 key={item}
                 href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                className="relative group text-gray-800 font-semibold text-base lg:text-xl hover:text-[#01cb58]"
+                className="relative group text-gray-800 font-medium text-base lg:text-xl hover:text-[#01cb58]"
               >
                 {item}
                 <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#01cb58] transition-all duration-300 group-hover:w-full" />
