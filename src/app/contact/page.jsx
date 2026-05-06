@@ -118,7 +118,7 @@ export default function ContactPage() {
                             </p>
 
                             <div className="flex items-center gap-2 text-sm sm:text-base font-medium text-(--text-light) mb-2">
-                                <MdEmail className="shrink-0 text-green-500" /> support@qutbee.com
+                                <MdEmail className="shrink-0 text-green-500" /> support@tamaam.com
                             </div>
 
                             <div className="flex items-center gap-2 text-sm sm:text-base font-medium text-(--text-light)">

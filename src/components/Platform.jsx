@@ -42,7 +42,7 @@ export default function Platform() {
 
         {/* Subtext */}
         <p className="text-sm sm:text-base md:text-lg lg:text-[22px] max-w-4xl mx-auto py-4 font-medium text-(--text-light)">
-          Qutbee Technologies simplifies cybersecurity by combining essential
+          Tamaam Technologies simplifies cybersecurity by combining essential
           security and compliance tools in one interface.
         </p>
 
@@ -54,7 +54,7 @@ export default function Platform() {
             Everything You Need in One Place
           </h3>
 
-          <div className="w-16 sm:w-25 h-px sm:h-0.5 bg-linear-to-r from-[#1f3631] via-[#3b7553] to-[#4ade80] mb-6 sm:mb-8"></div>
+          <div className="w-16 sm:w-25 h-px sm:h-0.5 bg-linear-to-r from-[#4ade80]  to-[#3b7553] mb-6 sm:mb-8"></div>
 
           {/* Items */}
           <div className="space-y-5 sm:space-y-6">

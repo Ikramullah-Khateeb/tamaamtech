@@ -64,7 +64,7 @@ export default function CyberSecurity() {
 
         {/* Subtext */}
         <p className="text-sm sm:text-base md:text-lg lg:text-[22px] max-w-4xl mx-auto py-4 font-medium text-(--text-light)">
-          Qutbee Technologies brings essential security and compliance features into a single, streamlined interface.
+          Tamaam Technologies brings essential security and compliance features into a single, streamlined interface.
         </p>
 
         {/* Grid */}

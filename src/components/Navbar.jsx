@@ -11,17 +11,18 @@ import {
 import { FiMenu } from "react-icons/fi";
 
 export default function Navbar() {
-  const navItems = ["Home", "About", "Services", "Blogs", "Contact"];
+  const navItems = ["Home", "About", "Services", "Contact"];
 
   return (
     <nav
       className="fixed left-1/2 -translate-x-1/2 top-6 z-50 w-[90%] max-w-7xl
-      rounded-2xl border bg-white/10 backdrop-blur-xl border-white/20 shadow-lg"
+  rounded-2xl border bg-white/95 backdrop-blur-xl border-white/20
+  shadow-[0_10px_30px_rgba(1,203,88,0.15),0_4px_12px_rgba(0,0,0,0.08)]"
     >
       {/* toggle */}
       <input id="menu-toggle" type="checkbox" className="peer hidden" />
 
-      <div className="flex items-center justify-between px-6 py-3">
+      <div className="flex items-center justify-between px-6 py-2">
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
@@ -48,7 +49,7 @@ export default function Navbar() {
               <Link
                 key={item}
                 href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                className="relative group text-gray-800 font-medium hover:text-[#01cb58]"
+                className="relative group text-gray-800 font-semibold text-base lg:text-xl hover:text-[#01cb58]"
               >
                 {item}
                 <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#01cb58] transition-all duration-300 group-hover:w-full" />
@@ -58,10 +59,10 @@ export default function Navbar() {
 
           {/* Socials ONLY desktop */}
           <div className="flex items-center gap-5">
-            <FaWhatsapp size={22} className="text-gray-800 hover:text-[#01cb58]" />
-            <FaLinkedinIn size={22} className="text-gray-800 hover:text-[#01cb58]" />
-            <FaEnvelope size={22} className="text-gray-800 hover:text-[#01cb58]" />
-            <FaPhone size={22} className="text-gray-800 hover:text-[#01cb58]" />
+            <FaWhatsapp size={20} className="text-gray-800 hover:text-[#01cb58]" />
+            <FaLinkedinIn size={20} className="text-gray-800 hover:text-[#01cb58]" />
+            <FaEnvelope size={20} className="text-gray-800 hover:text-[#01cb58]" />
+            <FaPhone size={20} className="text-gray-800 hover:text-[#01cb58]" />
           </div>
         </div>
       </div>
@@ -69,7 +70,7 @@ export default function Navbar() {
       {/* Mobile/Tablet Menu (hamburger) */}
       <div
         className="lg:hidden max-h-0 overflow-hidden opacity-0 transition-all duration-300
-        peer-checked:max-h-[420px] peer-checked:opacity-100"
+        peer-checked:max-h-105 peer-checked:opacity-100"
       >
         <div className="px-6 pb-6 flex flex-col items-center gap-5 text-center">
           {navItems.map((item) => (

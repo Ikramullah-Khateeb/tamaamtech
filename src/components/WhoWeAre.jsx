@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function WhoWeAre() {
   return (
@@ -27,23 +28,24 @@ export default function WhoWeAre() {
               Our expertise spans <strong>AI development</strong>, <strong>end-to-end cybersecurity</strong>—including penetration testing, threat detection, and incident response—along with cloud solutions, enterprise software, and digital transformation consulting.
             </p>
 
-            <button
+            <Link
+              href="/about"
               className="
-                px-5 sm:px-7 py-1.5 sm:py-3 rounded-xl
-                inline-flex items-center gap-2
-                text-sm sm:text-base font-bold text-white
-                bg-linear-to-br from-[#01cb58] to-[#00a346]
-                shadow-[0_4px_24px_rgba(1,203,88,0.35),inset_0_1px_0_rgba(255,255,255,0.25)]
-                transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]
+              px-5 sm:px-7 py-1.5 sm:py-3 rounded-xl
+              inline-flex items-center gap-2
+              text-sm sm:text-base font-bold text-white
+              bg-linear-to-br from-[#01cb58] to-[#00a346]
+              shadow-[0_4px_24px_rgba(1,203,88,0.35),inset_0_1px_0_rgba(255,255,255,0.25)]
+              transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]
 
-                hover:from-[#00e66a] hover:to-[#00b84d]
-                hover:shadow-[0_8px_40px_rgba(1,203,88,0.6),inset_0_1px_0_rgba(255,255,255,0.3)]
-                hover:-translate-y-1 hover:scale-[1.03]
-                active:scale-[0.98]
-              "
+              hover:from-[#00e66a] hover:to-[#00b84d]
+              hover:shadow-[0_8px_40px_rgba(1,203,88,0.6),inset_0_1px_0_rgba(255,255,255,0.3)]
+              hover:-translate-y-1 hover:scale-[1.03]
+              active:scale-[0.98]
+  "
             >
               About Tamaam Tech
-            </button>
+            </Link>
           </div>
 
           {/* RIGHT SIDE */}

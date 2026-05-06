@@ -16,8 +16,8 @@ export default function ServicesPage() {
     serviceCtaTitle={"Real"}
     highlight={"Security"}
     suffix={"Not Just Compliance."}
-    ctaDescription={"Stay ahead of evolving threats with Qutbee’s scalable, real-world security."}
-    primaryBtn={"Explore Services"}
+    ctaDescription={"Stay ahead of evolving threats with Tamaam’s scalable, real-world security."}
+    primaryBtn={"Get Free Consultation"}
     secondaryBtn={"Get Free Consultation"}
     secondaryhref={"/contact"}/>
 </section>

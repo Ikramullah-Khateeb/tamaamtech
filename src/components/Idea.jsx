@@ -32,13 +32,13 @@ const steps = [
     id: "05",
     title: "Launch & Optimize",
     desc: "Deploy, monitor analytics, and iterate for continuous improvement.",
-    icon: HiOutlineRocketLaunch, // ✅ FIXED
+    icon: HiOutlineRocketLaunch,
   },
 ];
 
 export default function Idea() {
   return (
-    <section className="bg-[#eef1f7]  px-4 sm:px-6 py-14 sm:py-20">
+    <section className="bg-[#eef1f7] px-4 sm:px-6 py-14 sm:py-20">
       <div className="max-w-7xl mx-auto text-center">
 
         {/* Header */}
@@ -52,28 +52,46 @@ export default function Idea() {
           </p>
 
           <p className="text-sm sm:text-base md:text-lg font-medium text-(--text-light)">
-            At Zentroa, a leading web development company in Dubai, we provide full-cycle web design and development
-            from concept to launch and beyond. Our in-house team creates AI-powered, modern digital solutions tailored to your needs. We handle every stage, from planning and design to development, ensuring smooth execution and high-quality results for your business.
+            At Tamaam, a leading web development company in Dubai, we provide full-cycle web design and development from concept to launch and beyond. Our in-house team creates AI-powered, modern digital solutions tailored to your needs. We handle every stage, from planning and design
+            to development, ensuring smooth execution and high-quality results for your business.
           </p>
         </div>
 
         {/* Steps */}
-        <div className="relative">
-          <div className="hidden md:block absolute top-10 left-0 right-0 h-px bg-linear-to-r from-[#1f3631] via-[#3b7553] to-[#4ade80]" />
+        <div className="relative overflow-visible">
 
+          {/* LINE (only desktop) */}
+          <div className="hidden lg:block absolute top-10 left-0 right-0 h-0.5
+            bg-linear-to-r from-[#4ade80] to-[#3b7553] z-0" />
+
+          {/* GRID */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 md:gap-6">
             {steps.map((step) => {
               const Icon = step.icon;
 
               return (
-                <div key={step.id} className="relative flex flex-col items-center text-center">
+                <div
+                  key={step.id}
+                  className="relative z-10 flex flex-col items-center text-center"
+                >
+                  {/* ICON + HOVER EFFECT */}
+                  <div className="relative group">
 
-                  <div className="relative">
+                    {/* Mask (hides line on hover) */}
+                    <div className="
+                      absolute inset-0 rounded-full bg-[#eef1f7]
+                      scale-0 group-hover:scale-[1.4]
+                      transition-all duration-300
+                      z-0 pointer-events-none
+                    " />
+
+                    {/* Icon */}
                     <div
                       className="
-                        w-20 h-20 rounded-full bg-white border border-(--border-light)
+                        relative z-10
+                        w-20 h-20 rounded-full bg-white border border-gray-200
                         flex items-center justify-center
-                        text-(--primary-color) [&>svg]:w-7 [&>svg]:h-7
+                        text-gray-700 [&>svg]:w-7 [&>svg]:h-7
 
                         transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]
                         hover:bg-[#01cb58]/10 hover:border-[#01cb58]
@@ -85,25 +103,27 @@ export default function Idea() {
                       <Icon />
                     </div>
 
-                    <span className="absolute -top-2 -right-2 text-xs font-bold text-white bg-green-500 rounded-full w-7 h-7 flex items-center justify-center">
+                    {/* Step Number */}
+                    <span className="absolute -top-2 -right-2 z-20 text-xs font-bold text-white bg-green-500 rounded-full w-7 h-7 flex items-center justify-center">
                       {step.id}
                     </span>
                   </div>
 
+                  {/* Title */}
                   <h3 className="mt-5 text-sm sm:text-base md:text-lg lg:text-xl font-semibold heading-color">
                     {step.title}
                   </h3>
 
-                  <p className="mt-5 text-sm sm:text-base md:text-lg font-normal text-(--text-light)">
+                  {/* Description */}
+                  <p className="mt-5 text-sm sm:text-base md:text-lg font-normal text-gray-500">
                     {step.desc}
                   </p>
-
                 </div>
               );
             })}
           </div>
-        </div>
 
+        </div>
       </div>
     </section>
   );

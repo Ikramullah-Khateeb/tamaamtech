@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Popup from "./Popup";
+import { FiArrowRight } from "react-icons/fi";
+import Link from "next/link";
 
 const CARDS = [
   { label: "Landing Page Websites", url: "landingpage-studio.ae" },
@@ -32,7 +34,7 @@ function CardPreview({ index }) {
         <div className="h-2.5 rounded w-3/4 bg-white/20" />
         <div className="h-1.5 rounded w-1/2 bg-white/10" />
         <div className="flex gap-2 mt-3">
-          <div className="h-6 w-20 rounded bg-gradient-to-br from-[#01cb58] to-[#00a346]" />
+          <div className="h-6 w-20 rounded bg-linear-to-br from-[#01cb58] to-[#00a346]" />
           <div className="h-6 w-16 rounded border border-[rgba(1,203,88,0.3)] bg-[rgba(1,203,88,0.08)]" />
         </div>
         <div className="grid grid-cols-3 gap-1.5 mt-3">
@@ -55,7 +57,7 @@ function CardPreview({ index }) {
             </div>
           ))}
         </div>
-        <div className="h-1 w-full rounded bg-gradient-to-r from-[#01cb58] to-transparent" />
+        <div className="h-1 w-full rounded bg-linear-to-r from-[#01cb58] to-transparent" />
         <div className="flex justify-between items-center mt-1">
           <div className="h-2 w-1/3 rounded bg-white/10" />
           <div className="h-5 w-16 rounded text-[7px] font-bold flex items-center justify-center bg-[#01cb58] text-black">
@@ -93,7 +95,7 @@ function CardPreview({ index }) {
           <div
             key={i}
             className={`flex-1 rounded-t ${i === 3
-              ? "bg-gradient-to-t from-[#00a346] to-[#01cb58] shadow-[0_0_12px_rgba(1,203,88,0.5)]"
+              ? "bg-linear-to-t from-[#00a346] to-[#01cb58] shadow-[0_0_12px_rgba(1,203,88,0.5)]"
               : "bg-white/10"
               }`}
             style={{ height: `${h}%` }}
@@ -124,8 +126,8 @@ function ServiceCard({ card, index }) {
     >
       <div
         className={`flex items-center justify-between px-3 py-2.5 transition-colors duration-300 ${hovered
-          ? "bg-gradient-to-r from-[#01cb58] to-[#00a346]"
-          : "bg-gradient-to-r from-[#00a346] to-[#007a35]"
+          ? "bg-linear-to-r from-[#01cb58] to-[#00a346]"
+          : "bg-linear-to-r from-[#00a346] to-[#007a35]"
           }`}
       >
         <span className="text-[10px] font-bold tracking-widest text-black uppercase">
@@ -134,7 +136,7 @@ function ServiceCard({ card, index }) {
         <span className="text-black/50 text-sm">→</span>
       </div>
 
-      <div className="px-4 pt-4 pb-5 min-h-[180px]">
+      <div className="px-4 pt-4 pb-5 min-h-45">
         <BrowserBar url={card.url} />
         <CardPreview index={index} />
       </div>
@@ -240,15 +242,30 @@ export default function HeroSection() {
               eCommerce, branding, and results-driven SEO services.
             </p>
 
-            <div className="flex flex-wrap gap-3 mb-3 pt-1">
+            <div className="flex flex-wrap gap-5 mb-3 pt-1">
               <button
                 onClick={() => setShowPopup(true)}
-                className="px-7 py-3 rounded-xl inline-flex items-center gap-2 text-sm font-bold text-white bg-gradient-to-br from-[#01cb58] to-[#00a346] shadow-[0_4px_24px_rgba(1,203,88,0.35)] transition-all duration-300 hover:shadow-[0_8px_40px_rgba(1,203,88,0.6)] hover:-translate-y-1 hover:scale-[1.03] active:scale-[0.98]">
-                Start your project →
+                className="px-8 py-4 rounded-xl inline-flex items-center gap-2 text-base font-bold text-white 
+                bg-linear-to-br from-[#01cb58] to-[#00a346] 
+                shadow-[0_4px_24px_rgba(1,203,88,0.35)] 
+                transition-all duration-300 
+                hover:shadow-[0_8px_40px_rgba(1,203,88,0.6)] 
+                hover:-translate-y-1 hover:scale-[1.03] active:scale-[0.98]"
+              >
+                Start your project
+                <FiArrowRight className="text-xl transition-transform duration-300 group-hover:translate-x-1" />
               </button>
-              <button className="px-7 py-3 rounded-xl text-sm font-semibold border-[1.5px] border-[rgba(1,203,88,0.5)] text-[#00a346] transition-all duration-300 hover:bg-[rgba(1,203,88,0.06)] hover:border-[#01cb58] hover:-translate-y-0.5">
+
+              <Link
+                href="/services"
+                className="px-8 py-4 rounded-xl text-base font-semibold 
+                border-[1.5px] border-[rgba(1,203,88,0.5)] text-[#00a346] 
+                transition-all duration-300 inline-flex items-center justify-center
+                hover:bg-[rgba(1,203,88,0.06)] 
+                hover:border-[#01cb58] hover:-translate-y-0.5"
+              >
                 Explore Services
-              </button>
+              </Link>
             </div>
 
             <div className="flex items-center gap-3 pt-1">
@@ -271,7 +288,7 @@ export default function HeroSection() {
           </div>
 
           {/* ── RIGHT SECTION ── */}
-          <div className="hidden min-[840px]:block h-[700px] overflow-hidden">
+          <div className="hidden min-[840px]:block h-175 overflow-hidden">
 
             {/* 840px–1023px → 1 scrolling column */}
             <div className="block lg:hidden h-full overflow-hidden">

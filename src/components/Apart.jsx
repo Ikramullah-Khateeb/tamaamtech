@@ -15,7 +15,7 @@ export default function Apart() {
           {/* Card 1 */}
           <div className="bg-[#ffffff] rounded-2xl p-5 sm:p-6 md:p-8 shadow-(--shadow-large)">
             <p className="text-sm sm:text-base md:text-lg lg:text-xl font-medium text-(--text-dark) text-left">
-              What makes <strong>Qutbee</strong> stand out is our ability to blend creativity with technology. Our expert team delivers solutions tailored to each client's unique goals, combining innovation, security, and functionality in every project.
+              What makes <strong>Tamaam</strong> stand out is our ability to blend creativity with technology. Our expert team delivers solutions tailored to each client's unique goals, combining innovation, security, and functionality in every project.
             </p>
           </div>
 
@@ -29,7 +29,7 @@ export default function Apart() {
           {/* Card 3 */}
           <div className="bg-[#ffffff] rounded-2xl p-5 sm:p-6 md:p-8 shadow-(--shadow-large)">
             <p className="text-sm sm:text-base md:text-lg lg:text-xl font-medium text-(--text-dark) text-left">
-              At <strong>Qutbee Technologies</strong>, we don't just build IT systems—we craft digital ecosystems that drive growth, strengthen trust, and make businesses future-ready. With every website we create and every solution we deliver, we are shaping the future of digital transformation in the UAE.
+              At <strong>Tamaam Technologies</strong>, we don't just build IT systems—we craft digital ecosystems that drive growth, strengthen trust, and make businesses future-ready. With every website we create and every solution we deliver, we are shaping the future of digital transformation in the UAE.
             </p>
           </div>
 
