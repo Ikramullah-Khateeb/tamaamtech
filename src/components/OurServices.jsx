@@ -20,12 +20,12 @@ export default function OurServices() {
             <div className='max-w-7xl mx-auto text-center'>
 
                 {/* Heading */}
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold sm:font-bold leading-tight tracking-tight bg-gradient-to-r from-[#20283f] to-[#01cb58] bg-clip-text text-transparent">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold sm:font-bold leading-tight tracking-tight heading-color ">
                     What We Engineer & Execute
                 </h2>
 
                 {/* Grid */}
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mt-10 sm:mt-14'>
+                <div className=" mt-10 sm:mt-12 md:mt-14  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
 
                     <div className={cardClass} style={cardStyle} onMouseEnter={hoverOn} onMouseLeave={hoverOff}>
                         <div className='mb-4'>
@@ -33,7 +33,7 @@ export default function OurServices() {
                                 <IoHardwareChip />
                             </span>
                         </div>
-                        <h3 className='text-base sm:text-lg md:text-xl font-semibold mb-2 text-left text-(--primary-color) '>
+                        <h3 className='text-base sm:text-lg md:text-xl font-semibold mb-2 text-left heading-color '>
                             AI Powered Solutions
                         </h3>
                         <div className='text-sm sm:text-base font-medium text-(--text-dark) text-left leading-relaxed'>
@@ -47,7 +47,7 @@ export default function OurServices() {
                                 <FaMobileAlt />
                             </span>
                         </div>
-                        <h3 className='text-base sm:text-lg md:text-xl font-semibold mb-2 text-left text-(--primary-color) '>
+                        <h3 className='text-base sm:text-lg md:text-xl font-semibold mb-2 text-left heading-color '>
                             Web and Mobile Apps
                         </h3>
                         <div className='text-sm sm:text-base font-medium text-(--text-dark) text-left leading-relaxed'>
@@ -61,7 +61,7 @@ export default function OurServices() {
                                 <FaCloud />
                             </span>
                         </div>
-                        <h3 className='text-base sm:text-lg md:text-xl font-semibold mb-2 text-left text-(--primary-color) '>
+                        <h3 className='text-base sm:text-lg md:text-xl font-semibold mb-2 text-left heading-color '>
                             Cloud Services (Google/Azure/AWS)
                         </h3>
                         <div className='text-sm sm:text-base font-medium text-(--text-dark) text-left leading-relaxed'>
@@ -75,7 +75,7 @@ export default function OurServices() {
                                 <FaBullhorn />
                             </span>
                         </div>
-                        <h3 className='text-base sm:text-lg md:text-xl font-semibold mb-2 text-left text-(--primary-color) '>
+                        <h3 className='text-base sm:text-lg md:text-xl font-semibold mb-2 text-left heading-color '>
                             Digital Marketing and Social Media
                         </h3>
                         <div className='text-sm sm:text-base font-medium text-(--text-dark) text-left leading-relaxed'>
@@ -89,7 +89,7 @@ export default function OurServices() {
                                 <FaServer />
                             </span>
                         </div>
-                        <h3 className='text-base sm:text-lg md:text-xl font-semibold mb-2 text-left text-(--primary-color) '>
+                        <h3 className='text-base sm:text-lg md:text-xl font-semibold mb-2 text-left heading-color '>
                             IT Infra and TechOps Solutions
                         </h3>
                         <div className='text-sm sm:text-base font-medium text-(--text-dark) text-left leading-relaxed'>
@@ -103,7 +103,7 @@ export default function OurServices() {
                                 <FaShieldAlt />
                             </span>
                         </div>
-                        <h3 className='text-base sm:text-lg md:text-xl font-semibold mb-2 text-left text-(--primary-color) '>
+                        <h3 className='text-base sm:text-lg md:text-xl font-semibold mb-2 text-left heading-color '>
                             Cybersecurity & Threat Protection
                         </h3>
                         <div className='text-sm sm:text-base font-medium text-(--text-dark) text-left leading-relaxed'>

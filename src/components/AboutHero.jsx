@@ -34,15 +34,15 @@ export default function AboutHero() {
             <div className="relative max-w-7xl mx-auto text-center">
 
                 {/* Badge */}
-                <div className="inline-flex items-center gap-2 bg-[rgba(59,130,246,0.1)] text-[#3b82f6] px-3 sm:px-4 py-1.5 sm:py-2 rounded-4xl text-xs sm:text-[0.875rem] font-medium">
+                <div className="inline-flex items-center gap-2 bg-[#01cb58]/10 text-[#052e1a] px-3 sm:px-4 py-1.5 sm:py-2 rounded-4xl text-xs sm:text-[0.875rem] font-medium">
                     <span>About the Company</span>
                 </div>
 
                 {/* ─── Main Heading — UNCHANGED ─── */}
-                <h2 className="mt-6 text-xl sm:text-3xl md:text-5xl font-semibold sm:font-bold leading-tight tracking-[-1px] bg-linear-to-r from-(--primary-color) to-[#01cb58] bg-clip-text text-transparent">
+                <h2 className="mt-6 text-xl sm:text-3xl md:text-5xl font-semibold sm:font-bold leading-tight tracking-[-1px] heading-color">
                     We Engineer the{" "}
                     <span className="relative inline-block">
-                        <span className="absolute inset-0 blur-xl bg-[#01cb58]/30 rounded-full"></span>
+                        <span className="absolute inset-0 blur-xl bg-[#a7f3d0]/30 rounded-full"></span>
                         <span className="inline-block pr-2 bg-linear-to-r from-(--primary-color) to-(--text-dark) bg-clip-text text-transparent italic">
                             Intelligent
                         </span>

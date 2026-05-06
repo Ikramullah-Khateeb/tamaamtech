@@ -31,12 +31,12 @@ export default function Platform() {
 
       <div className="max-w-7xl mx-auto text-center">
 
-        <div className="inline-flex items-center gap-2 bg-[rgba(59,130,246,0.1)] text-[#3b82f6] px-3 sm:px-4 py-1.5 sm:py-2 rounded-4xl text-xs sm:text-[0.875rem] font-medium">
+        <div className="inline-flex items-center gap-2 bg-[#01cb58]/10 text-[#052e1a] px-3 mb-4 sm:px-4 py-1.5 sm:py-2 rounded-4xl text-xs sm:text-[0.875rem] font-medium">
           <span>ALL IN ONE PLATFORM</span>
         </div>
 
         {/* Heading */}
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold sm:font-bold leading-tight tracking-[-1px] bg-linear-to-r from-(--primary-color) to-[#3b82f6] bg-clip-text text-transparent">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold sm:font-bold leading-tight tracking-[-1px] heading-color">
           Security. Compliance. Clarity.
         </h2>
 
@@ -44,43 +44,43 @@ export default function Platform() {
         <p className="text-sm sm:text-base md:text-lg lg:text-[22px] max-w-4xl mx-auto py-4 font-medium text-(--text-light)">
           Qutbee Technologies simplifies cybersecurity by combining essential
           security and compliance tools in one interface.
-          </p>
+        </p>
 
         {/* Content */}
         <div>
 
           {/* Sub Heading */}
-          <h3 className=" mt-10 sm:mt-12 md:mt-14 text-base sm:text-2xl md:text-3xl font-semibold leading-tight tracking-[-1px] text-(--primary-color) text-left">
+          <h3 className=" mt-10 sm:mt-12 md:mt-14 text-base sm:text-2xl md:text-3xl font-semibold leading-tight tracking-[-1px] heading-color text-left">
             Everything You Need in One Place
           </h3>
 
-          <div className="w-8 sm:w-10 h-0.5 bg-[#20283f] mb-6 sm:mb-8"></div>
+          <div className="w-16 sm:w-25 h-px sm:h-0.5 bg-linear-to-r from-[#1f3631] via-[#3b7553] to-[#4ade80] mb-6 sm:mb-8"></div>
 
           {/* Items */}
-<div className="space-y-5 sm:space-y-6">
-  {items.map((item, index) => {
-    const Icon = item.icon;
+          <div className="space-y-5 sm:space-y-6">
+            {items.map((item, index) => {
+              const Icon = item.icon;
 
-    return (
-      <div key={index} className="flex items-start gap-3 sm:gap-4">
+              return (
+                <div key={index} className="flex items-start gap-3 sm:gap-4">
 
-        {/* Icon */}
-        <div className="text-base sm:text-xl font-semibold text-(--primary-color) mt-1">
-          <Icon />
-        </div>
+                  {/* Icon */}
+                  <div className="text-base sm:text-xl font-semibold text-green-500 mt-1.5">
+                    <Icon />
+                  </div>
 
-        {/* Text */}
-        <p className="text-base sm:text-xl text-left font-medium text-(--text-light)">
-          <strong className="text-(--primary-color) font-semibold " >
-            {item.title}
-          </strong>{" "}
-          {item.text}
-        </p>
+                  {/* Text */}
+                  <p className="text-base sm:text-xl text-left font-medium text-(--text-light)">
+                    <strong className="heading-color font-semibold " >
+                      {item.title}
+                    </strong>{" "}
+                    {item.text}
+                  </p>
 
-      </div>
-    );
-  })}
-</div>
+                </div>
+              );
+            })}
+          </div>
 
         </div>
       </div>

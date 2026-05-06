@@ -35,7 +35,7 @@ export default function ContactPage() {
             <div className="relative z-10 max-w-7xl mx-auto text-center">
 
                 {/* Heading */}
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold sm:font-bold text-center mb-1 pt-6 sm:pt-8 md:pt-10 leading-tight tracking-[-1px] bg-linear-to-r from-(--primary-color) to-[#3b82f6] bg-clip-text text-transparent">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold sm:font-bold text-center mb-1 pt-6 sm:pt-8 md:pt-10 leading-tight tracking-[-1px] heading-color">
                     Get In Touch
                 </h2>
 
@@ -49,7 +49,7 @@ export default function ContactPage() {
                     {/* LEFT - FORM */}
                     <div className="bg-white/50  rounded-2xl p-5 sm:p-6 md:p-8 shadow-(--shadow-large) border border-transparent hover:border-(--primary-color) hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
 
-                        <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold leading-tight tracking-[-1px] text-(--primary-color) mb-4 sm:mb-5">
+                        <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold leading-tight tracking-[-1px] heading-color mb-4 sm:mb-5">
                             Send Us a Message
                         </h3>
 
@@ -81,7 +81,19 @@ export default function ContactPage() {
 
                             <button
                                 type="submit"
-                                className="w-full sm:w-auto bg-[#1f2e4a] text-(--white) font-semibold px-7 py-3 rounded-lg text-sm sm:text-base hover:bg-[#1e40af] transition duration-300"
+                                className="
+                                    px-5 sm:px-7 py-2 sm:py-3 rounded-xl
+                                    inline-flex items-center gap-2
+                                    text-sm sm:text-base font-bold text-white
+                                    bg-linear-to-br from-[#01cb58] to-[#00a346]
+                                    shadow-[0_4px_24px_rgba(1,203,88,0.35),inset_0_1px_0_rgba(255,255,255,0.25)]
+                                    transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]
+
+                                    hover:from-[#00e66a] hover:to-[#00b84d]
+                                    hover:shadow-[0_8px_40px_rgba(1,203,88,0.6),inset_0_1px_0_rgba(255,255,255,0.3)]
+                                    hover:-translate-y-1 hover:scale-[1.03]
+                                    active:scale-[0.98]
+                                "
                             >
                                 Send Message
                             </button>
@@ -92,12 +104,12 @@ export default function ContactPage() {
                     {/* RIGHT - CONTACT DETAILS */}
                     <div className="bg-white/60 rounded-2xl p-5 sm:p-6 md:p-8 shadow-(--shadow-large) border border-transparent hover:border-(--primary-color) hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
 
-                        <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold leading-tight tracking-[-1px] text-(--primary-color) mb-4 sm:mb-5">
+                        <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold leading-tight tracking-[-1px] heading-color mb-4 sm:mb-5">
                             Contact Details
                         </h3>
 
                         <div className="mb-5 sm:mb-6">
-                            <h4 className="text-base sm:text-xl font-semibold text-(--primary-color) mb-2">
+                            <h4 className="text-base sm:text-xl font-semibold heading-color mb-2">
                                 Connect With Us
                             </h4>
 
@@ -106,16 +118,16 @@ export default function ContactPage() {
                             </p>
 
                             <div className="flex items-center gap-2 text-sm sm:text-base font-medium text-(--text-light) mb-2">
-                                <MdEmail className="shrink-0 text-(--text-dark)" /> support@qutbee.com
+                                <MdEmail className="shrink-0 text-green-500" /> support@qutbee.com
                             </div>
 
                             <div className="flex items-center gap-2 text-sm sm:text-base font-medium text-(--text-light)">
-                                <FaPhoneAlt className="shrink-0 text-(--text-dark)" /> <span className="font-['Nata_Sans',sans-serif]">+971 509853664</span> 
+                                <FaPhoneAlt className="shrink-0 text-green-500" /> <span className="font-['Nata_Sans',sans-serif]">+971 509853664</span>
                             </div>
                         </div>
 
                         <div className="mb-5 sm:mb-6">
-                            <h4 className="text-base sm:text-xl font-semibold text-(--primary-color) mb-2">
+                            <h4 className="text-base sm:text-xl font-semibold heading-color mb-2">
                                 Where to Find Us
                             </h4>
 
@@ -124,21 +136,21 @@ export default function ContactPage() {
                             </p>
 
                             <div className="flex items-center gap-2 text-sm sm:text-base font-medium text-(--text-light)">
-                                <RiMapPin2Fill className="shrink-0 text-(--text-dark)" /> Abu Dhabi, United Arab Emirates
+                                <RiMapPin2Fill className="shrink-0 text-green-500" /> Abu Dhabi, United Arab Emirates
                             </div>
                         </div>
 
                         <div className="flex flex-wrap gap-3 mt-4">
-                            <div className="w-9 h-9 sm:w-10 sm:h-10 bg-[#1f2e4a] text-white flex items-center justify-center rounded-full hover:bg-[#1e40af] transition cursor-pointer">
+                            <div className="w-9 h-9 sm:w-10 sm:h-10 bg-green-500 text-white flex items-center justify-center rounded-full hover:bg-green-700 transition cursor-pointer">
                                 <FaWhatsapp size={16} />
                             </div>
-                            <div className="w-9 h-9 sm:w-10 sm:h-10 bg-[#1f2e4a] text-white flex items-center justify-center rounded-full hover:bg-[#1e40af] transition cursor-pointer">
+                            <div className="w-9 h-9 sm:w-10 sm:h-10 bg-green-500 text-white flex items-center justify-center rounded-full hover:bg-green-700 transition cursor-pointer">
                                 <FaLinkedinIn size={16} />
                             </div>
-                            <div className="w-9 h-9 sm:w-10 sm:h-10 bg-[#1f2e4a] text-white flex items-center justify-center rounded-full hover:bg-[#1e40af] transition cursor-pointer">
+                            <div className="w-9 h-9 sm:w-10 sm:h-10 bg-green-500 text-white flex items-center justify-center rounded-full hover:bg-green-700 transition cursor-pointer">
                                 <MdEmail size={16} />
                             </div>
-                            <div className="w-9 h-9 sm:w-10 sm:h-10 bg-[#1f2e4a] text-white flex items-center justify-center rounded-full hover:bg-[#1e40af] transition cursor-pointer">
+                            <div className="w-9 h-9 sm:w-10 sm:h-10 bg-green-500 text-white flex items-center justify-center rounded-full hover:bg-green-700 transition cursor-pointer">
                                 <FaPhoneAlt size={16} />
                             </div>
                         </div>

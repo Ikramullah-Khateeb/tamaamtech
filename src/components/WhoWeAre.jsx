@@ -2,18 +2,15 @@ import Image from "next/image";
 
 export default function WhoWeAre() {
   return (
-    <section className="relative bg-white px-4 sm:px-6 py-14 sm:py-20 text-slate-800">
+    <section className="relative bg-white px-4 sm:px-6 py-14 sm:py-20">
 
       {/* ── Green top accent line ── */}
-      <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-[#01cb58] to-transparent opacity-70" />
-
-      {/* ── Subtle green radial glow ── */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-[radial-gradient(ellipse_at_center_top,rgba(1,203,88,0.06)_0%,transparent_70%)] pointer-events-none" />
+      <div className="absolute top-0 left-0 right-0 h-0.75 bg-linear-to-r from-transparent via-[#01cb58] to-transparent opacity-70" />
 
       <div className="relative z-10 max-w-7xl mx-auto">
 
         <div className="text-center mb-10 sm:mb-14">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold sm:font-bold leading-tight tracking-tight bg-linear-to-r from-[#20283f] to-[#01cb58] bg-clip-text text-transparent">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold sm:font-bold leading-tight tracking-tight heading-color">
             Who We Are
           </h2>
         </div>
@@ -22,7 +19,7 @@ export default function WhoWeAre() {
 
           {/* LEFT SIDE */}
           <div className="order-2 [@media(min-width:1217px)]:order-1">
-            <p className="text-[1rem] sm:text-[1.1rem] lg:text-[1.25rem] text-(--text-dark) leading-[1.7] text-left md:text-justify mb-6">
+            <p className="text-[1rem] sm:text-[1.1rem] lg:text-[1.25rem] text-(--text-dark) leading-[1.7] text-left mb-6">
               <strong>Tamaam Technologies</strong> is a UAE-based, ISO 27001-certified technology and AI consulting firm committed to delivering secure, scalable, and intelligent digital solutions from the UAE to the world.
 
               We partner with organizations across industries including FinTech, PropTech, EdTech, HealthTech, RetailTech, AgriTech, and GovTech, helping them innovate and grow in an increasingly digital landscape.
@@ -35,7 +32,7 @@ export default function WhoWeAre() {
                 px-5 sm:px-7 py-1.5 sm:py-3 rounded-xl
                 inline-flex items-center gap-2
                 text-sm sm:text-base font-bold text-white
-                bg-gradient-to-br from-[#01cb58] to-[#00a346]
+                bg-linear-to-br from-[#01cb58] to-[#00a346]
                 shadow-[0_4px_24px_rgba(1,203,88,0.35),inset_0_1px_0_rgba(255,255,255,0.25)]
                 transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]
 
@@ -56,7 +53,7 @@ export default function WhoWeAre() {
               alt="About us"
               width={1200}
               height={800}
-              className="w-full max-w-[520px] sm:max-w-[700px] md:max-w-[850px] lg:max-w-[1000px] h-auto object-cover rounded-2xl shadow-xl"
+              className="w-full max-w-130 sm:max-w-175 md:max-w-212.5 lg:max-w-250 h-auto object-cover rounded-2xl shadow-xl"
             />
           </div>
 

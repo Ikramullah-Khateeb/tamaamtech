@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Popup from "./Popup";
 
 const CARDS = [
   { label: "Landing Page Websites", url: "landingpage-studio.ae" },
@@ -147,6 +148,7 @@ function ServiceCard({ card, index }) {
 
 export default function HeroSection() {
   const [visible, setVisible] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
     const t = setTimeout(() => setVisible(true), 80);
@@ -239,7 +241,9 @@ export default function HeroSection() {
             </p>
 
             <div className="flex flex-wrap gap-3 mb-3 pt-1">
-              <button className="px-7 py-3 rounded-xl inline-flex items-center gap-2 text-sm font-bold text-white bg-gradient-to-br from-[#01cb58] to-[#00a346] shadow-[0_4px_24px_rgba(1,203,88,0.35)] transition-all duration-300 hover:shadow-[0_8px_40px_rgba(1,203,88,0.6)] hover:-translate-y-1 hover:scale-[1.03] active:scale-[0.98]">
+              <button
+                onClick={() => setShowPopup(true)}
+                className="px-7 py-3 rounded-xl inline-flex items-center gap-2 text-sm font-bold text-white bg-gradient-to-br from-[#01cb58] to-[#00a346] shadow-[0_4px_24px_rgba(1,203,88,0.35)] transition-all duration-300 hover:shadow-[0_8px_40px_rgba(1,203,88,0.6)] hover:-translate-y-1 hover:scale-[1.03] active:scale-[0.98]">
                 Start your project →
               </button>
               <button className="px-7 py-3 rounded-xl text-sm font-semibold border-[1.5px] border-[rgba(1,203,88,0.5)] text-[#00a346] transition-all duration-300 hover:bg-[rgba(1,203,88,0.06)] hover:border-[#01cb58] hover:-translate-y-0.5">
@@ -300,6 +304,10 @@ export default function HeroSection() {
 
         </div>
       </div>
+
+      {/* Popup Modal */}
+      {showPopup && <Popup onClose={() => setShowPopup(false)} />}
+
     </section>
   );
 }

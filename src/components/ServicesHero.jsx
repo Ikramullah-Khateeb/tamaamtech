@@ -50,14 +50,14 @@ export default function ServicesHero() {
 
         {/* Badge */}
 
-        <div className="inline-flex items-center gap-2 bg-[rgba(59,130,246,0.1)] text-[#3b82f6] px-3 sm:px-4 py-1.5 sm:py-2 rounded-4xl text-xs sm:text-[0.875rem] font-medium">
+        <div className="inline-flex items-center gap-2 bg-[#01cb58]/10 text-[#052e1a] px-3 sm:px-4 py-1.5 sm:py-2 rounded-4xl text-xs sm:text-[0.875rem] font-medium">
           <span> Our Services</span>
         </div>
 
-        <h1 className="mt-6 text-xl sm:text-3xl md:text-5xl font-semibold sm:font-bold leading-tight tracking-[-1px] bg-linear-to-r from-(--primary-color) to-[#01cb58] bg-clip-text text-transparent">
+        <h1 className="mt-6 text-xl sm:text-3xl md:text-5xl font-semibold sm:font-bold leading-tight tracking-[-1px] heading-color">
           We Don’t{" "}
           <span className="relative inline-block">
-            <span className="absolute inset-0 blur-xl bg-[#01cb58]/30 rounded-full"></span>
+            <span className="absolute inset-0 blur-xl bg-[#a7f3d0]/30 rounded-full"></span>
             <span className="inline-block pr-2 bg-linear-to-r from-(--primary-color) to-(--text-dark) bg-clip-text text-transparent italic">
               Simulate
             </span>
@@ -65,9 +65,9 @@ export default function ServicesHero() {
           <br className="hidden sm:block" />
           Threats We Expose Them
         </h1>
- 
+
         <p className="text-sm sm:text-base md:text-lg lg:text-[22px] max-w-4xl mx-auto py-4 font-medium text-(--text-light)">
-          From design to deployment, marketing to maintenance — we deliver end-to-end digital solutions.
+          From design to deployment, marketing to maintenance - we deliver end-to-end digital solutions.
         </p>
 
 

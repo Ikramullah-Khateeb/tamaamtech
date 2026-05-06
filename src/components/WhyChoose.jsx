@@ -34,7 +34,7 @@ export default function WhyChoose() {
             <div className="max-w-7xl mx-auto text-center">
 
                 {/* Heading */}
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold sm:font-bold leading-tight tracking-[-1px] bg-linear-to-r from-(--primary-color) to-[#3b82f6] bg-clip-text text-transparent">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold sm:font-bold leading-tight tracking-[-1px] heading-color">
                     Why Choose Us?
                 </h2>
 
@@ -48,10 +48,10 @@ export default function WhyChoose() {
                     {features.map((card, index) => (
                         <div key={index} className="flex items-start gap-3 sm:gap-4">
                             {/* Circle Icon */}
-                            <div className="mt-1.5 sm:mt-2 size-3.5 sm:size-4 shrink-0 rounded-full border-2 border-(--primary-color)"></div>
+                            <div className="mt-1.5 sm:mt-3 size-3.5 sm:size-4 shrink-0 rounded-full border-2 border-(--primary-color)"></div>
 
                             <div>
-                                <h3 className="text-base sm:text-2xl md:text-3xl font-semibold leading-tight tracking-[-1px] text-(--primary-color)">
+                                <h3 className="text-base sm:text-2xl md:text-3xl font-semibold leading-tight tracking-[-1px] heading-color">
                                     {card.title}
                                 </h3>
                                 <p className="text-sm sm:text-lg pt-2 font-medium text-(--text-light)">
