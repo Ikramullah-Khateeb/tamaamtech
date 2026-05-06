@@ -38,32 +38,28 @@ const steps = [
 
 export default function Idea() {
   return (
-    <section className="bg-[#eef1f7]  px-4 sm:px-6 py-14 sm:py-20 text-slate-800">
+    <section className="bg-[#eef1f7]  px-4 sm:px-6 py-14 sm:py-20">
       <div className="max-w-7xl mx-auto text-center">
 
         {/* Header */}
         <div className="max-w-5xl mx-auto mb-12 sm:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold sm:font-bold leading-tight tracking-tight bg-linear-to-r from-[#20283f] to-[#01cb58] bg-clip-text text-transparent">
-            From idea to launch
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold sm:font-bold leading-tight tracking-tight heading-color">
+            From Idea to Launch
           </h2>
 
-          <p className="mt-4 text-sm sm:text-base md:text-lg font-medium text-(--text-light)">
+          <p className="text-sm sm:text-base md:text-lg lg:text-[22px] max-w-4xl mx-auto py-4 font-medium text-slate-500">
             A proven five-step methodology that delivers results on time, every time.
           </p>
 
-          <p className="mt-5 text-sm sm:text-base md:text-lg font-medium text-(--text-light)">
-            At Zentroa, a premier web development company in Dubai, we offer full-cycle web design and
-            development, delivering end-to-end web development solutions from concept to launch and beyond.
-            Our in-house team of designers and developers crafts AI-powered, cutting-edge digital solutions
-            tailored to your unique needs. We manage every phase—from initial analysis, planning, and design
-            through to development—for a seamless execution. With our rigorous end-to-end methodology, each
-            stage is delivered with precision and efficiency, ensuring exceptional outcomes for your business.
+          <p className="text-sm sm:text-base md:text-lg font-medium text-(--text-light)">
+            At Zentroa, a leading web development company in Dubai, we provide full-cycle web design and development
+            from concept to launch and beyond. Our in-house team creates AI-powered, modern digital solutions tailored to your needs. We handle every stage, from planning and design to development, ensuring smooth execution and high-quality results for your business.
           </p>
         </div>
 
         {/* Steps */}
         <div className="relative">
-          <div className="hidden md:block absolute top-10 left-0 right-0 h-px bg-slate-400" />
+          <div className="hidden md:block absolute top-10 left-0 right-0 h-px bg-linear-to-r from-[#1f3631] via-[#3b7553] to-[#4ade80]" />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 md:gap-6">
             {steps.map((step) => {
@@ -89,12 +85,12 @@ export default function Idea() {
                       <Icon />
                     </div>
 
-                    <span className="absolute -top-2 -right-2 text-xs font-bold text-white bg-[#20283f] rounded-full w-7 h-7 flex items-center justify-center">
+                    <span className="absolute -top-2 -right-2 text-xs font-bold text-white bg-green-500 rounded-full w-7 h-7 flex items-center justify-center">
                       {step.id}
                     </span>
                   </div>
 
-                  <h3 className="mt-5 text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-(--primary-color)">
+                  <h3 className="mt-5 text-sm sm:text-base md:text-lg lg:text-xl font-semibold heading-color">
                     {step.title}
                   </h3>
 

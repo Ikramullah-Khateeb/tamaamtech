@@ -5,7 +5,7 @@ export default function Apart() {
       <div className="max-w-7xl mx-auto text-center">
 
         {/* Heading */}
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold sm:font-bold leading-tight tracking-[-1px] bg-linear-to-r from-(--primary-color) to-[#3b82f6] bg-clip-text text-transparent">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold sm:font-bold leading-tight tracking-[-1px] heading-color">
           What Sets Us Apart?
         </h2>
 

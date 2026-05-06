@@ -51,12 +51,12 @@ export default function CyberSecurity() {
       {/* Container */}
       <div className="max-w-7xl text-center mx-auto">
 
-        <div className="inline-flex items-center gap-2 bg-[rgba(59,130,246,0.1)] text-[#3b82f6] px-3 sm:px-4 py-1.5 sm:py-2 rounded-4xl text-xs sm:text-[0.875rem] font-medium">
+        <div className="inline-flex items-center gap-2 bg-[#01cb58]/10 text-[#052e1a] mb-4 px-3 sm:px-4 py-1.5 sm:py-2 rounded-4xl text-xs sm:text-[0.875rem] font-medium">
           <span>The Complete Cybersecurity Platform</span>
         </div>
 
         {/* Heading */}
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold sm:font-bold leading-tight tracking-[-1px] bg-linear-to-r from-(--primary-color) to-[#3b82f6] bg-clip-text text-transparent">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold sm:font-bold leading-tight tracking-[-1px] heading-color">
           All Your Security Tools.<br />
           One Unified Platform
 
@@ -90,11 +90,11 @@ export default function CyberSecurity() {
 
                   {/* Top Row: Icon + Title */}
                   <div className="flex items-start gap-3 sm:gap-4">
-                    <div className="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-[#20283f] text-white shrink-0">
-                      <Icon size={16} />
-                    </div>
+                    <span className='text-xl sm:text-2xl bg-(--primary-color) rounded-full p-3 h-12 w-12 flex items-center justify-center text-(--white)'>
+                      <Icon  />
+                    </span>
 
-                    <h3 className="text-base sm:text-lg md:text-xl font-semibold text-left">
+                    <h3 className="text-base sm:text-lg md:text-xl font-semibold heading-color text-left">
                       {item.title}
                     </h3>
                   </div>

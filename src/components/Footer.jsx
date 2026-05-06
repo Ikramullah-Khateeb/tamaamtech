@@ -5,10 +5,10 @@ import { FiSend } from "react-icons/fi";
 
 export default function Footer() {
   return (
-    <footer className="relative bg-black text-gray-300 px-4 sm:px-6 py-14 sm:py-16 md:py-18">
+    <footer className="relative bg-[#0f2f24] text-gray-300 px-4 sm:px-6 py-14 sm:py-16 md:py-18">
 
       {/* Top Accent Line */}
-      <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#01cb58] to-transparent opacity-70" />
+      <div className="absolute top-0 left-0 right-0 h-0.5 bg-linear-to-r from-transparent via-[#01cb58] to-transparent opacity-70" />
 
       <div className="max-w-7xl mx-auto">
 
@@ -17,7 +17,7 @@ export default function Footer() {
           {/* Logo + About */}
           <div>
             <div className="flex items-center gap-3 mb-2">
-              <div className="w-10 h-10 sm:w-11 sm:h-11 bg-gradient-to-br from-black to-[#01cb58] rounded-md"></div>
+              <div className="w-10 h-10 sm:w-11 sm:h-11 bg-linear-to-br from-black to-[#01cb58] rounded-md"></div>
               <span className="text-white text-lg sm:text-xl font-semibold italic">
                 Tamaam
               </span>
@@ -82,7 +82,7 @@ export default function Footer() {
                 placeholder="Enter your email"
                 className="bg-transparent px-4 py-3 text-sm sm:text-base outline-none w-full text-white placeholder-gray-500"
               />
-              <button className="bg-[#01cb58] px-4 py-3 hover:bg-[#00b84d] transition">
+              <button className="bg-[#01cb58] px-4 py-3 hover:bg- transition">
                 <FiSend className="w-5 h-5 text-black" />
               </button>
             </div>
