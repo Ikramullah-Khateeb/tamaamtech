@@ -100,14 +100,11 @@ export default function Partners() {
     <section className="relative bg-white px-4 sm:px-6 py-14 sm:py-20 text-slate-800 overflow-hidden">
 
       {/* ── Green top accent line ── */}
-      <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-[#01cb58] to-transparent opacity-70" />
-
-      {/* ── Subtle green radial glow ── */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-[radial-gradient(ellipse_at_center_top,rgba(1,203,88,0.06)_0%,transparent_70%)] pointer-events-none" />
+      <div className="absolute top-0 left-0 right-0 h-0.75 bg-linear-to-r from-transparent via-[#01cb58] to-transparent opacity-70" />
 
       {/* ── Heading block ── */}
       <div className="relative z-10 text-center px-6 pb-16">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold sm:font-bold leading-tight tracking-tight bg-gradient-to-r from-[#20283f] to-[#01cb58] bg-clip-text text-transparent">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold sm:font-bold leading-tight tracking-tight bg-linear-to-r from-[#20283f] to-[#01cb58] bg-clip-text text-transparent">
           Trusted by World's Leading Brands
         </h2>
         <p className="text-sm sm:text-base md:text-lg lg:text-[22px] max-w-4xl mx-auto py-4 font-medium text-slate-500">
@@ -131,10 +128,10 @@ export default function Partners() {
               title={partner.name}
               className="
                 flex items-center justify-center
-                min-w-[170px] h-[90px] px-6
+                min-w-42.5 h-22.5 px-6
                 rounded-[14px] bg-[#fafafa] border border-[#eeeeee]
                 shrink-0 cursor-pointer
-                transition-all duration-[250ms] ease-in-out
+                transition-all duration-250 ease-in-out
                 hover:bg-[#e4e8f0] hover:border-[rgba(1,203,88,0.55)]
                 hover:-translate-y-1 hover:shadow-[0_8px_28px_rgba(1,203,88,0.13)]
               "

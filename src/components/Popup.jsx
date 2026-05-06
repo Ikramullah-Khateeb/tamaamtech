@@ -69,11 +69,11 @@ export default function Popup({ onClose }) {
                     <div className="grid grid-cols-2 gap-4">
                         <div>
                             <label className="block text-sm font-semibold text-gray-700 mb-1.5">
-                                Phone Number
+                                Phone Number <span className="text-red-500">*</span>
                             </label>
                             <input
                                 name="phone" type="tel" placeholder="+971 5X XXX XXXX"
-                                value={form.phone} onChange={handleChange}
+                                value={form.phone} onChange={handleChange} required
                                 className="w-full px-3.5 py-2.5 text-sm border border-gray-200 rounded-xl outline-none focus:border-green-500 transition placeholder-gray-400"
                             />
                         </div>
@@ -93,17 +93,19 @@ export default function Popup({ onClose }) {
                     <div className="grid grid-cols-2 gap-4">
                         <div>
                             <label className="block text-sm font-semibold text-gray-700 mb-1.5">
-                                Service Required
+                                Service Required <span className="text-red-500">*</span>
                             </label>
                             <select
-                                name="service" value={form.service} onChange={handleChange}
+                                name="service" value={form.service} onChange={handleChange} required
                                 className="w-full px-3.5 py-2.5 text-sm border border-gray-200 rounded-xl outline-none focus:border-green-500 transition text-gray-700 appearance-none bg-white cursor-pointer"
                             >
                                 <option value="">Select a service</option>
-                                <option>AI Engineering</option>
-                                <option>Penetration Testing</option>
-                                <option>Cloud Architecture</option>
-                                <option>Cybersecurity Audit</option>
+                                <option>AI Powered Solutions</option>
+                                <option>Web and Mobile Apps</option>
+                                <option>Cloud Services (Google/Azure/AWS)</option>
+                                <option>Digital Marketing and Social Media</option>
+                                <option>IT Infra and TechOps Solutions</option>
+                                <option>Cybersecurity & Threat Protection</option>
                             </select>
                         </div>
                         <div>
@@ -126,10 +128,10 @@ export default function Popup({ onClose }) {
                     {/* Project Details */}
                     <div>
                         <label className="block text-sm font-semibold text-gray-700 mb-1.5">
-                            Project Details <span className="text-red-500">*</span>
+                            Project Details
                         </label>
                         <textarea
-                            name="details" rows={4} required
+                            name="details" rows={4}
                             placeholder="Tell us about your project requirements, goals, and timeline…"
                             value={form.details} onChange={handleChange}
                             className="w-full px-3.5 py-2.5 text-sm border border-gray-200 rounded-xl outline-none focus:border-green-500 transition placeholder-gray-400 resize-none"

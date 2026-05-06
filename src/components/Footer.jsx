@@ -1,11 +1,13 @@
 "use client";
 
+import Link from "next/link";
+import Image from "next/image";
 import { FaFacebookF, FaYoutube, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { FiSend } from "react-icons/fi";
 
 export default function Footer() {
   return (
-    <footer className="relative bg-[#0f2f24] text-gray-300 px-4 sm:px-6 py-14 sm:py-16 md:py-18">
+    <footer className="relative bg-[#0f2f24]/90 text-gray-300 px-4 sm:px-6 pt-14 sm:pt-16 md:pt-18">
 
       {/* Top Accent Line */}
       <div className="absolute top-0 left-0 right-0 h-0.5 bg-linear-to-r from-transparent via-[#01cb58] to-transparent opacity-70" />
@@ -17,10 +19,16 @@ export default function Footer() {
           {/* Logo + About */}
           <div>
             <div className="flex items-center gap-3 mb-2">
-              <div className="w-10 h-10 sm:w-11 sm:h-11 bg-linear-to-br from-black to-[#01cb58] rounded-md"></div>
-              <span className="text-white text-lg sm:text-xl font-semibold italic">
-                Tamaam
-              </span>
+              {/* Logo */}
+              <Link href="/" className="flex items-center">
+                <Image
+                  src="/tamamlogo.png"
+                  alt="Logo"
+                  width={140}
+                  height={40}
+                  className="w-26 h-13 sm:w-28 sm:h-14 md:w-32 md:h-16 object-cover"
+                />
+              </Link>
             </div>
 
             <p className="text-sm sm:text-lg pt-2 font-medium leading-relaxed mb-4 text-gray-400">
@@ -31,9 +39,9 @@ export default function Footer() {
               {[FaFacebookF, FaYoutube, FaLinkedinIn, FaInstagram].map((Icon, i) => (
                 <div
                   key={i}
-                  className="w-12 h-12 sm:w-14 sm:h-14 bg-[#111111] rounded-full flex items-center justify-center hover:bg-[#01cb58] hover:text-black transition-all duration-300 cursor-pointer"
+                  className="size-8 bg-[#111111] rounded-full flex items-center justify-center hover:bg-[#01cb58] hover:text-black transition-all duration-300 cursor-pointer"
                 >
-                  <Icon size={20} />
+                  <Icon size={16} />
                 </div>
               ))}
             </div>
@@ -76,25 +84,28 @@ export default function Footer() {
               Subscribe to our newsletter for the latest insights and technology trends.
             </p>
 
-            <div className="flex items-center bg-[#111111] rounded-lg overflow-hidden border border-[#01cb58]/20">
+            <div className="w-full max-w-md mx-auto flex items-center gap-3 border-b border-white/20 focus-within:border-[#01cb58] transition">
+
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="bg-transparent px-4 py-3 text-sm sm:text-base outline-none w-full text-white placeholder-gray-500"
+                className="flex-1 bg-transparent py-3 text-white placeholder-gray-500 outline-none"
               />
-              <button className="bg-[#01cb58] px-4 py-3 hover:bg- transition">
-                <FiSend className="w-5 h-5 text-black" />
+
+              <button className="h-10 w-10 rounded-md bg-[#01cb58] hover:bg-[#00b34d] flex items-center justify-center transition">
+                <FiSend className="w-4 h-4 text-black" />
               </button>
+
             </div>
           </div>
 
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-[#01cb58]/20 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm sm:text-base">
+        <div className="border-t border-[#01cb58]/20 mt-12 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm sm:text-base">
 
           <p className="text-sm sm:text-lg pt-2 font-medium text-gray-400 text-center md:text-left">
-            © 2020 Tamaam Technologies. All rights reserved.
+            © 2026 Tamaam Technologies. All rights reserved.
           </p>
 
           <div className="flex flex-wrap justify-center md:justify-end gap-6 text-sm sm:text-lg pt-2 font-medium text-gray-400">

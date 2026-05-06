@@ -11,7 +11,19 @@ const hoverOff = (e) => {
     e.currentTarget.style.transform = 'translateY(0px)'
 }
 
-const cardClass = 'flex flex-col items-start justify-start bg-white rounded-2xl p-5 sm:p-6 md:p-8 shadow-(--shadow-large)'
+const cardClass = `
+        relative bg-white rounded-xl p-5 sm:p-6 transition-all duration-300 border border-transparent overflow-hidden
+
+        before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-0 
+        before:bg-[#01cb58] before:transition-all before:duration-300
+
+        after:absolute after:bottom-0 after:right-0 after:h-[2px] after:w-0 
+        after:bg-[#01cb58] after:transition-all after:duration-300
+
+        hover:before:w-1/2 hover:after:w-1/2
+
+        group
+        `;
 const cardStyle = { transition: 'transform 0.25s ease' }
 
 export default function OurServices() {
