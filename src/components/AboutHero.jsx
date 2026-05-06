@@ -31,10 +31,10 @@ export default function AboutHero() {
                 }}
             />
 
-            <div className="relative max-w-7xl mx-auto text-center">
+            <div className="relative max-w-7xl mx-auto pt-12 sm:pt-0 text-center">
 
                 {/* Badge */}
-                <div className="inline-flex items-center gap-2 bg-[#01cb58]/10 text-[#052e1a] px-3 sm:px-4 py-1.5 sm:py-2 rounded-4xl text-xs sm:text-[0.875rem] font-medium">
+                <div className="inline-flex items-center bg-[#01cb58]/10 text-[#052e1a] px-3 sm:px-4 py-1.5 sm:py-2 rounded-4xl text-xs sm:text-[0.875rem] font-medium">
                     <span>About the Company</span>
                 </div>
 
