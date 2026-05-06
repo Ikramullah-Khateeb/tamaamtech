@@ -32,7 +32,7 @@ export default function Platform() {
       <div className="max-w-7xl mx-auto text-center">
 
         <div className="inline-flex items-center gap-2 bg-[#01cb58]/10 text-[#052e1a] px-3 mb-4 sm:px-4 py-1.5 sm:py-2 rounded-4xl text-xs sm:text-[0.875rem] font-medium">
-          <span>ALL IN ONE PLATFORM</span>
+          <span>All In One Platform</span>
         </div>
 
         {/* Heading */}

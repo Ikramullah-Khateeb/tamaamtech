@@ -46,7 +46,7 @@ export default function ServicesHero() {
       />
 
       {/* Content */}
-      <div className="relative max-w-7xl mx-auto text-center">
+      <div className="relative max-w-7xl pt-12 sm:pt-0 mx-auto text-center">
 
         {/* Badge */}
 
