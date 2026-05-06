@@ -12,17 +12,16 @@ const hoverOff = (e) => {
 }
 
 const cardClass = `
-        relative bg-white rounded-xl p-5 sm:p-6 transition-all duration-300 border border-transparent overflow-hidden
+        relative bg-white rounded-xl p-5 sm:p-6 transition-all duration-300 border border-transparent overflow-hidden group
 
-        before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-0 
-        before:bg-[#01cb58] before:transition-all before:duration-300
+        before:absolute before:bottom-0 before:left-1/2 before:-translate-x-1/2
+        before:h-[2px] before:w-full
+        before:bg-gradient-to-r before:from-transparent before:via-[#01cb58] before:to-transparent
 
-        after:absolute after:bottom-0 after:right-0 after:h-[2px] after:w-0 
-        after:bg-[#01cb58] after:transition-all after:duration-300
+        before:scale-x-0 before:origin-center
+        before:transition-transform before:duration-300
 
-        hover:before:w-1/2 hover:after:w-1/2
-
-        group
+        hover:before:scale-x-100
         `;
 const cardStyle = { transition: 'transform 0.25s ease' }
 
