@@ -50,7 +50,7 @@ export default function Platform() {
         <div>
 
           {/* Sub Heading */}
-          <h3 className=" mt-10 sm:mt-12 md:mt-14 text-base sm:text-2xl md:text-3xl font-semibold leading-tight tracking-[-1px] heading-color text-left">
+          <h3 className=" mt-10 sm:mt-12 md:mt-14 text-xl sm:text-2xl md:text-3xl font-semibold leading-tight tracking-[-1px] heading-color text-left">
             Everything You Need in One Place
           </h3>
 
