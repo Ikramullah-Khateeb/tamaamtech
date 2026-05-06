@@ -216,12 +216,27 @@ export default function HeroSection() {
         >
 
           {/* ── LEFT: Text content ── */}
-          <div className="flex flex-col gap-3 sm:gap-2 pb-12 pt-20 items-center text-center min-[840px]:items-start min-[840px]:text-left">
-            <div className="hero-badge-glow inline-flex w-fit items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-[rgba(1,203,88,0.08)] border border-[rgba(1,203,88,0.35)] text-[#00a346] mb-2 sm:mb-1">
-              Our Web Development – Fast, Scalable &amp; Maintainable.
+          {/* ── LEFT: Text content ── */}
+          <div className="flex flex-col gap-4 sm:gap-5 lg:gap-6 
+  pt-16 sm:pt-20 lg:pt-24 pb-10 
+  items-center text-center 
+  min-[840px]:items-start min-[840px]:text-left"
+          >
+
+            {/* Badge */}
+            <div className="hero-badge-glow inline-flex w-fit items-center gap-2 
+    px-3 sm:px-4 py-1.5 sm:py-2 
+    rounded-full text-xs sm:text-sm font-medium 
+    bg-[rgba(1,203,88,0.08)] border border-[rgba(1,203,88,0.35)] 
+    text-[#00a346]"
+            >
+              Our Web Development – Fast, Scalable & Maintainable.
             </div>
 
-            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.15] tracking-tight text-gray-900 mt-1 mb-2 sm:mb-1">
+            {/* Heading */}
+            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl 
+    font-bold leading-[1.15] tracking-tight text-gray-900"
+            >
               Web Design{" "}
               <span className="relative inline-block">
                 <span className="absolute inset-0 blur-xl rounded-full bg-[rgba(1,203,88,0.2)]" />
@@ -231,56 +246,73 @@ export default function HeroSection() {
               {" "}in Dubai
             </h1>
 
-            <p className="text-sm sm:text-base mb-4 sm:mb-3 md:text-lg lg:text-xl max-w-xl font-medium leading-relaxed text-gray-500">
+            {/* Description */}
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl 
+    max-w-md sm:max-w-lg lg:max-w-xl 
+    font-medium leading-relaxed text-gray-500"
+            >
               Tamaam Technologies is Dubai&apos;s leading web design company, with{" "}
               <span className="text-[#00a346] font-semibold">15 years of expertise</span> in
               cutting-edge website design, web development, custom WordPress, scalable
               eCommerce, branding, and results-driven SEO services.
             </p>
 
-            <div className="flex flex-wrap gap-5 mb-3 pt-1">
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row w-full sm:w-auto gap-3 sm:gap-4 pt-2">
+
               <button
                 onClick={() => setShowPopup(true)}
-                className="px-8 py-4 rounded-xl inline-flex items-center gap-2 text-base font-bold text-white 
-                bg-linear-to-br from-[#01cb58] to-[#00a346] 
-                shadow-[0_4px_24px_rgba(1,203,88,0.35)] 
-                transition-all duration-300 
-                hover:shadow-[0_8px_40px_rgba(1,203,88,0.6)] 
-                hover:-translate-y-1 hover:scale-[1.03] active:scale-[0.98]"
+                className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 
+      rounded-xl flex items-center justify-center gap-2 
+      text-sm sm:text-base font-bold text-white 
+      bg-linear-to-br from-[#01cb58] to-[#00a346] 
+      shadow-[0_4px_24px_rgba(1,203,88,0.35)] 
+      transition-all duration-300 
+      hover:shadow-[0_8px_40px_rgba(1,203,88,0.6)] 
+      hover:-translate-y-1 hover:scale-[1.03] active:scale-[0.98]"
               >
                 Start your project
-                <FiArrowRight className="text-xl transition-transform duration-300 group-hover:translate-x-1" />
+                <FiArrowRight className="text-lg sm:text-xl" />
               </button>
 
               <Link
                 href="/services"
-                className="px-8 py-4 rounded-xl text-base font-semibold 
-                border-[1.5px] border-[rgba(1,203,88,0.5)] text-[#00a346] 
-                transition-all duration-300 inline-flex items-center justify-center
-                hover:bg-[rgba(1,203,88,0.06)] 
-                hover:border-[#01cb58] hover:-translate-y-0.5"
+                className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 
+      rounded-xl text-sm sm:text-base font-semibold 
+      border-[1.5px] border-[rgba(1,203,88,0.5)] text-[#00a346] 
+      flex items-center justify-center
+      transition-all duration-300
+      hover:bg-[rgba(1,203,88,0.06)] 
+      hover:border-[#01cb58]"
               >
                 Explore Services
               </Link>
+
             </div>
 
-            <div className="flex items-center gap-3 pt-1">
+            {/* Trust Row */}
+            <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 pt-2">
+
               <div className="flex -space-x-2">
                 {AVATAR_COLORS.map((color, i) => (
                   <div
                     key={i}
-                    className="w-7 h-7 rounded-full border-2 border-white flex items-center justify-center text-white text-[9px] font-bold"
+                    className="w-6 h-6 sm:w-7 sm:h-7 rounded-full border-2 border-white 
+          flex items-center justify-center text-white text-[8px] sm:text-[9px] font-bold"
                     style={{ background: color, zIndex: 4 - i }}
                   >
                     {String.fromCharCode(65 + i * 4)}
                   </div>
                 ))}
               </div>
-              <span className="text-sm font-medium text-gray-400">
+
+              <span className="text-xs sm:text-sm font-medium text-gray-400 text-center sm:text-left">
                 Trusted by{" "}
                 <span className="text-[#00a346] font-semibold">200+ businesses</span> across UAE
               </span>
+
             </div>
+
           </div>
 
           {/* ── RIGHT SECTION ── */}
