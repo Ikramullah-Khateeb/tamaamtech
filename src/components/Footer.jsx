@@ -9,9 +9,6 @@ export default function Footer() {
   return (
     <footer className="relative bg-[#0f2f24]/90 text-gray-300 px-4 sm:px-6 pt-14 sm:pt-16 md:pt-18">
 
-      {/* Top Accent Line */}
-      <div className="absolute top-0 left-0 right-0 h-0.5 bg-linear-to-r from-transparent via-[#01cb58] to-transparent opacity-70" />
-
       <div className="max-w-7xl mx-auto">
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-10 sm:gap-y-12 gap-x-10 sm:gap-x-12 text-left">
@@ -39,9 +36,9 @@ export default function Footer() {
               {[FaFacebookF, FaYoutube, FaLinkedinIn, FaInstagram].map((Icon, i) => (
                 <div
                   key={i}
-                  className="size-8 bg-[#111111] rounded-full flex items-center justify-center hover:bg-[#01cb58] hover:text-black transition-all duration-300 cursor-pointer"
+                  className="size-10 bg-[#111111] rounded-full flex items-center justify-center hover:bg-[#01cb58] hover:text-black transition-all duration-300 cursor-pointer"
                 >
-                  <Icon size={16} />
+                  <Icon size={18} />
                 </div>
               ))}
             </div>
@@ -109,9 +106,28 @@ export default function Footer() {
           </p>
 
           <div className="flex flex-wrap justify-center md:justify-end gap-6 text-sm sm:text-lg pt-2 font-medium text-gray-400">
-            <span className="hover:text-[#01cb58] cursor-pointer">Privacy Policy</span>
-            <span className="hover:text-[#01cb58] cursor-pointer">Terms of Service</span>
-            <span className="hover:text-[#01cb58] cursor-pointer">Cookie Policy</span>
+
+            <Link
+              href="/privacypage"
+              className="hover:text-[#01cb58] transition"
+            >
+              Privacy Policy
+            </Link>
+
+            <Link
+              href="/termspage"
+              className="hover:text-[#01cb58] transition"
+            >
+              Terms of Service
+            </Link>
+
+            <Link
+              href="/cookiespage"
+              className="hover:text-[#01cb58] transition"
+            >
+              Cookie Policy
+            </Link>
+
           </div>
 
         </div>
